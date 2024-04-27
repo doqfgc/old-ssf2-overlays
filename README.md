@@ -9,11 +9,11 @@ While the intent to releasing these overlays is to foster creativity and aid in 
 Each overlay can be found in one of the folders above. A README for each overlay is included which includes information about the overlay, such as when it was used, what is required to use it, and a screenshot of the overlay being used on a real broadcast, if applicable.
 
 ## Overlays before 2021
-Overlays created before 2021 (v4 to v12.1) use an obsolete paid tool called [Scoreboard Assistant](https://obsproject.com/forum/resources/scoreboard-assistant.112/). With the exception of the v12.1 overlay, none of the pre-2021 overlays have been ported to CoreOverlay and will need this tool to use unmodified.
+Overlays created before 2021 (v4 to v12.1) use an obsolete paid tool called [Scoreboard Assistant](https://obsproject.com/forum/resources/scoreboard-assistant.112/). With the exception of the v12.1 CoreOverlay port, none of the pre-2021 overlays have been ported to CoreOverlay and will need this tool to use unmodified.
 
 Overlays created in 2021 and later (v12.1 and later) are built on some version of [CoreOverlay](https://github.com/doqfgc/CoreOverlay) and can work unmodified.
 
 ## Overlays before 2017
-Overlays created before 2017 (unnumbered series and v1/v2) were imagestacks maintained manually without any tools. There is also no guarantee that everything will be present, and the quality is so spotty that they have been omitted from the repository.
+Overlays created before 2017 ("Old Overlay" series and v1/v2) were imagestacks maintained manually without any tools. There is also no guarantee that everything will be present, and the quality is so spotty that they have been omitted from the repository.
 
 v3 is missing.
