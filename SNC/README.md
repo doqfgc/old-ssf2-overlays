@@ -3,3 +3,5 @@ This overlay was used for Saturday Night Crews during Season 4 of SSF2 Crew Leag
 
 ## Omitted components
 - Font: [Nova Square](https://fonts.google.com/specimen/Nova+Square)
+
+![SNC Overlay Screenshot](ss.jpg)

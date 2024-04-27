@@ -3,3 +3,5 @@ This overlay was used for Friday Night Crews in Season 5 of SSF2 Crew League, an
 
 ## Omitted components
 - Font: [MADE Outer Sans](https://www.dafont.com/made-outer-sans.font)
+
+![FNC Overlay Screenshot](ss.jpg)
