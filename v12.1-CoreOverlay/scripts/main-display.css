@@ -1,0 +1,128 @@
+/* 
+                                                                                            ,,                    
+`7MMF'  `7MMF'                                        .g8""8q.                            `7MM                    
+  MM      MM                                        .dP'    `YM.                            MM                    
+  MM      MM `7M'   `MF'`7MMpdMAo.  .gP"Ya `7Mb,od8 dM'      `MM `7M'   `MF'.gP"Ya `7Mb,od8 MM   ,6"Yb.`7M'   `MF'
+  MMmmmmmmMM   VA   ,V    MM   `Wb ,M'   Yb  MM' "' MM        MM   VA   ,V ,M'   Yb  MM' "' MM  8)   MM  VA   ,V  
+  MM      MM    VA ,V     MM    M8 8M""""""  MM     MM.      ,MP    VA ,V  8M""""""  MM     MM   ,pm9MM   VA ,V   
+  MM      MM     VVV      MM   ,AP YM.    ,  MM     `Mb.    ,dP'     VVV   YM.    ,  MM     MM  8M   MM    VVV    
+.JMML.  .JMML.   ,V       MMbmmd'   `Mbmmd'.JMML.     `"bmmd"'        W     `Mbmmd'.JMML. .JMML.`Moo9^Yo.  ,V     
+                ,V        MM                                                                              ,V      
+             OOb"       .JMML.                                                                         OOb"       
+
+	HyperOverlay ver.0.2.0
+	made without blood or sweat, but a lot of tears by doq
+
+	main-display.css - css code that handles the displayed overlay (what the stream sees)
+
+	HyperOverlay is licensed under the terms of the MIT License; see the COPYING file for license details.
+*/
+
+.full { position: absolute; width: 2160px; height: 125px; /*background-color: magenta;*/ }
+.btm { bottom: 0px; opacity: 0; }
+.top { top: 0px; opacity: 1; left: 0px; }
+
+.coverbox {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    visibility: visible;
+    transition: top 300ms, bottom 300ms;
+}
+
+.namebox {
+    width: 700px;
+    height: 55px;
+    background-repeat: no-repeat;
+    position: absolute;
+    opacity: 1;
+}
+
+.bg {
+    width: 667px;
+    height: 100%;
+    transform: skewX(-30deg);
+    position: absolute;
+    left: 15px;
+}
+
+.sbg {
+    width: 524px;
+    height: 100%;
+    transform: skewX(-30deg);
+    position: absolute;
+    left: 5px;
+}
+
+.pbg {
+    position: absolute;
+    width: 80px;
+    right: 18px;
+    height: 100%;
+    transform: skewX(-30deg);
+}
+
+.roundbox {
+    width: 539px;
+    height: 35px;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 30px;
+    left: 795px;
+    opacity: 1;
+}
+.rtext {
+    position: absolute;
+    top: -5px;
+    font-size: 24px;
+    left: 20px;
+}
+.p1n {
+    top: 10px;
+    left: 130px;
+    transition: opacity 300ms;
+}
+.p2n {
+    top: 65px;
+    left: 230px;
+    transition: opacity 300ms;
+}
+.pname {
+    position: absolute;
+    width: 100%;
+    text-align: left;
+    top: 6px;
+    left: 30px;
+    opacity: 0;
+    transition: opacity 500ms, left 500ms;
+}
+.pname small {
+    font-size: 24px;
+}
+.scorenum {
+    position: absolute;
+    width: 120px;
+    font-size: 56px;
+    top: 4px;
+    right: 0;
+    text-align: center;
+}
+.pscore {
+    width: 700px;
+    height: 55px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.recnum {
+    text-align: center;
+    font-weight: normal;
+    font-size: 24px;
+    position: absolute;
+    top: 6px;
+    right: 105px;
+    width: 10%;
+}

@@ -1,0 +1,180 @@
+<!-- 
+  .g8"""bgd                           .g8""8q.                            `7MM                    
+.dP'     `M                         .dP'    `YM.                            MM                    
+dM'       ` ,pW"Wq.`7Mb,od8 .gP"Ya  dM'      `MM `7M'   `MF'.gP"Ya `7Mb,od8 MM   ,6"Yb.`7M'   `MF'
+MM         6W'   `Wb MM' "',M'   Yb MM        MM   VA   ,V ,M'   Yb  MM' "' MM  8)   MM  VA   ,V  
+MM.        8M     M8 MM    8M"""""" MM.      ,MP    VA ,V  8M""""""  MM     MM   ,pm9MM   VA ,V   
+`Mb.     ,'YA.   ,A9 MM    YM.    , `Mb.    ,dP'     VVV   YM.    ,  MM     MM  8M   MM    VVV    
+  `"bmmmd'  `Ybmd9'.JMML.   `Mbmmd'   `"bmmd"'        W     `Mbmmd'.JMML. .JMML.`Moo9^Yo.  ,V     
+                                                                                          ,V      
+                                                                                       OOb"         
+	CoreOverlay ver.1.0.0
+	made without blood or sweat, but a lot of tears by doq
+
+	main.html - the foundation document in which all other components control or be controlled by
+
+	CoreOverlay is licensed under the terms of the MIT License; see the COPYING file for license details.
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Cache-control" content="max-age=0, must-revalidate, no-store">
+	<meta charset="utf-8">
+	<script src="scripts/_minified.js"></script>
+	<script src="scripts/main.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="scripts/main-display.css">
+	<link rel="stylesheet" type="text/css" href="scripts/main-controls.css">
+</head>
+
+<body>
+
+	<div class="full top">
+
+		<div class="controls">
+			<div class="topside">
+				<div class="leftside">
+					<div class="bigplayer">
+						<input class="inputglobal inputcrew" id="icr1c">
+						<input class="inputglobal inputplayer" id="icr1f"><br />
+						<input class="inputglobal inputcrew" id="icr1">
+						<input class="inputglobal inputplayer" id="ip1"><br />
+						<input class="inputglobal inputcrewpn" id="icr1p1">
+						<input class="inputglobal inputcrewpn" id="icr1p2">
+						<input class="inputglobal inputcrewpn" id="icr1p3">
+						<input class="inputglobal inputcrewpn" id="icr1p4">
+						<input class="inputglobal inputcrewpn" id="icr1p5"><br />
+						<input class="inputglobal inputbigscore" id="is1"><br />
+						<input class="inputglobal inputrecord" id="ir1w"> - <input class="inputglobal inputrecord" id="ir1l">
+					</div>
+				</div>
+				<div class="centreside">
+					<input type="checkbox" class="check" id="leftrosterbutton" onclick="HyperOverlay.showRoster(0);">
+					<input type="checkbox" class="check" id="rightrosterbutton" onclick="HyperOverlay.showRoster(1);"><br />
+					<button class="buttonglobal" type="button" onclick="HyperOverlay.send('left', 'up');">&#9650;</button>
+					<button class="buttonglobal" type="button" onclick="HyperOverlay.send('right', 'up');">&#9650;</button><br />
+					<button class="buttonglobal" type="button" onclick="HyperOverlay.send('left', 'down');">&#9660;</button>
+					<button class="buttonglobal" type="button" onclick="HyperOverlay.send('right', 'down');">&#9660;</button><br />
+					<button class="buttonglobal" type="button" onclick="HyperOverlay.send('send');">Send</button><br />
+					<button class="buttonglobal" type="button" onclick="HyperOverlay.switchp();">Switch</button><br />
+					<input type="checkbox" class="check" id="recordon" onclick="HyperOverlay.togglerecord();">
+				</div>
+				<div class="rightside">
+					<div class="bigplayer">
+						<input class="inputglobal inputcrew" id="icr2c">
+						<input class="inputglobal inputplayer" id="icr2f"><br />
+						<input class="inputglobal inputcrew" id="icr2">
+						<input class="inputglobal inputplayer" id="ip2"><br />
+						<input class="inputglobal inputcrewpn" id="icr2p1">
+						<input class="inputglobal inputcrewpn" id="icr2p2">
+						<input class="inputglobal inputcrewpn" id="icr2p3">
+						<input class="inputglobal inputcrewpn" id="icr2p4">
+						<input class="inputglobal inputcrewpn" id="icr2p5"><br />
+						<input class="inputglobal inputbigscore" id="is2"><br />
+						<input class="inputglobal inputrecord" id="ir2w"> - <input class="inputglobal inputrecord" id="ir2l">
+					</div>
+				</div>
+			</div>
+			<div class="bottomside">
+				Enabled <input type="checkbox" class="check" id="overlaystatus" onclick="HyperOverlay.toggleOverlay();">
+				Final <input type="checkbox" class="check" id="finalcheck" onclick="HyperOverlay.crewFinal();">
+				<input class="inputglobal inputgame" id="igg" list="setlist">
+				<datalist id="setlist">
+					<option value="Winners Bracket"></option>
+					<option value="Losers Bracket"></option>
+					<option value="Winners Quarterfinals"></option>
+					<option value="Winners Semifinals"></option>
+					<option value="Winners Finals"></option>
+					<option value="Losers Top 16"></option>
+					<option value="Losers Top 12"></option>
+					<option value="Losers Top 8"></option>
+					<option value="Losers Quarterfinals"></option>
+					<option value="Losers Semifinals"></option>
+					<option value="Losers Finals"></option>
+					<option value="Grand Finals"></option>
+				</datalist>
+				<!-- <input class="inputglobal inputset" id="imm" list="bolist"> -->
+				<datalist id="bolist">
+					<option value="Best of 3"></option>
+					<option value="Best of 5"></option>
+					<option value="Best of 7"></option>
+					<option value="First to 3"></option>
+					<option value="First to 4"></option>
+					<option value="First to 5"></option>
+				</datalist>
+				<p id="hol-status">OK</p>
+			</div>
+		</div>
+
+		<!--<div class="roundbox" id="mmb">
+			<div class="setbgcolor sbg"></div>
+			<div class="rtext settextcolor" id="gg"></div>
+		</div>-->
+
+		<div class="rosterboxes">
+			<div class="allroster">
+				<div class="allRbg bg"></div>
+			</div>
+			<div class="leftroster">
+				
+			</div>
+			<div class="rightroster">
+				
+			</div>
+		</div>
+
+		<div class="namebox p1n">
+			<div class="p1bgcolor bg" id="p1nb"></div>
+			<div class="p1bgcolorg bg" id="p1nb"></div>
+			<div class="pname p1textcolor" id="p1"></div>
+			<div class="cfname p1textcolor" id="cr1f"></div>
+			<div class="cname p1textcolor" id="cr1">
+				<span class="cr1p" id="cr1p5"></span><span class="cr1p" id="cr1p4"></span><span class="cr1p" id="cr1p3"></span><span class="cr1p" id="cr1p2"></span><span class="cr1p" id="cr1p1"></span>
+			</div>
+			<div class="pscore p1textcolor">
+				<div class="recnum p1r p1textcolor" id="r1"></div>
+			</div>
+		</div>
+
+		<div class="namebox p2n">
+			<div class="p2bgcolor bg" id="p2nb"></div>
+			<div class="p2bgcolorg bg" id="p2nb"></div>
+			<div class="pname p2textcolor" id="p2"></div>
+			<div class="cfname p2textcolor" id="cr2f"></div>
+			<div class="cname p2textcolor" id="cr2">
+				<span class="cr2p" id="cr2p1"></span><span class="cr2p" id="cr2p2"></span><span class="cr2p" id="cr2p3"></span><span class="cr2p" id="cr2p4"></span><span class="cr2p" id="cr2p5"></span>
+			</div>
+			<div class="pscore p2textcolor">
+				<div class="recnum p2r p2textcolor" id="r2"></div>
+			</div>
+		</div>
+
+		<div class="centrescore">
+			<div class="scorenum p1s" id="s1"><span id="s1d2"></span><span id="s1d1"></span></div>
+			<div class="scorenum p2s" id="s2"><span id="s2d2"></span><span id="s2d1"></span></div>
+		</div>
+<!--
+		<div class="fncwordmark">
+			<span class="friday">M<span class="opatx">ONDAY&nbsp;</span></span><span class="night">N<span class="opatx">IGHT&nbsp;</span></span><span class="crews">C<span class="opatx">REWS</span></span>
+		</div>
+-->
+		<div class="fncwordmark">
+			<span class="friday">M<span class="opatx">ONDAY&nbsp;</span></span><span class="night">N<span class="opatx">IGHT&nbsp;</span></span><span class="crews">C<span class="opatx">REWS</span></span>
+		</div>
+
+		<div class="masks">
+			<div class="keycolor" id="ms1"></div>
+			<div class="keycolor" id="ms2"></div>
+			<div class="keycolor" id="mst"></div>
+			<div class="keycolor" id="msb"></div>
+		</div>
+	</div>
+
+	<script>
+		$('#overlaystatus').set('checked', false);
+		$('#recordon').set('checked', false);
+		$('#finalcheck').set('checked', false);
+	</script>	
+</body>
+</html>

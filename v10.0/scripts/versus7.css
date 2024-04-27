@@ -1,0 +1,31 @@
+.full { position: absolute; width: 3360px; height: 175px; }
+.btm { bottom: 0px; opacity: 0; }
+.top { top: 0px; opacity: 1; left: 0px; }
+
+.bgmain { background: url('../images/mainbar.png'); background-repeat: no-repeat; width: 3360px; height: 175px; position: absolute; left: 0; top: 0; }
+.playermain { background: url('../images/playerbar.png'); background-repeat: no-repeat; width: 3360px; height: 175px; position: absolute; left: 0; top: 0; opacity: 0; }
+.mainlogo { background: url('../images/mglogo.png'); background-repeat: no-repeat; width: 3360px; height: 175px; position: absolute; left: 0; top: 0; opacity: 0; }
+.magental { background: url('../images/maskl.png'); background-repeat: no-repeat; width: 3360px; height: 175px; position: absolute; left: 0; top: 0; }
+.magentar { background: url('../images/maskr.png'); background-repeat: no-repeat; width: 3360px; height: 175px; position: absolute; right: 0; top: 0; }
+
+.game { position: absolute; width: 3360px; height: 175px; }
+.game1 { top: 112px; left: 270px; text-align: center; opacity: 0; }
+
+.match { position: absolute; width: 3360px; height: 175px; }
+.match1 { top: 112px; right: 560px; text-align: right; opacity: 0; }
+
+.player { position: absolute; width: 3360px; height: 175px; text-shadow: 2px 2px black; text-align: center; }
+.player1 { top: 112px; left: -905px; opacity: 0; }
+.player2 { top: 112px; left: -310px; opacity: 0; }
+
+.catchtext { width: 3360px; position: absolute; top: 112px; left: 0; visibility: hidden; text-align: center; font-size: 40px; letter-spacing: 0px; transition: letter-spacing 1500ms;}
+
+.score { position: absolute; width: 3360px; height: 175px; text-shadow: 2px 2px black; text-align: center; }
+.score11 { background: url('../images/player1sc1.png'); background-repeat: no-repeat; top: 0; right: 0; opacity: 0; position: absolute; left: 0; top: 0; filter: invert(0); transition: filter 250ms; }
+.score21 { background: url('../images/player2sc1.png'); background-repeat: no-repeat; top: 0; right: 0; opacity: 0; position: absolute; left: 0; top: 0; filter: invert(0); transition: filter 250ms; }
+.score12 { background: url('../images/player1sc2.png'); background-repeat: no-repeat; top: 0; right: 0; opacity: 0; position: absolute; left: 0; top: 0; filter: invert(0); transition: filter 250ms; }
+.score22 { background: url('../images/player2sc2.png'); background-repeat: no-repeat; top: 0; right: 0; opacity: 0; position: absolute; left: 0; top: 0; filter: invert(0); transition: filter 250ms; }
+.score13 { background: url('../images/player1sc3.png'); background-repeat: no-repeat; top: 0; right: 0; opacity: 0; position: absolute; left: 0; top: 0; filter: invert(0); transition: filter 250ms; }
+.score23 { background: url('../images/player2sc3.png'); background-repeat: no-repeat; top: 0; right: 0; opacity: 0; position: absolute; left: 0; top: 0; filter: invert(0); transition: filter 250ms; }
+
+.dummy { opacity: 0; }

@@ -1,0 +1,39 @@
+body {
+	position: relative; width: 1920px; margin: 0; overflow: hidden; white-space: nowrap;
+	color: #FFF; font-family: "Segoe UI";
+	font-weight: bold;
+	font-size: 40px; line-height: 42px; text-align: left;
+	text-transform: uppercase;
+	font-style: italic;
+}
+
+.full { width: 1920px; height: 1080px; top: 0px; opacity: 1; left: 0px; /*background-color: magenta;*/ }
+.abs { position: absolute; }
+
+.text {
+    top: 690px;
+    width: 100%;
+    transform: rotate(-5deg);
+    text-align: center;
+}
+
+.pl1, .pl2 {
+    font-size: 144px;
+    width: 1200px;
+    text-shadow: black 5px 5px;
+}
+
+.pl1 {
+    left: 0px;
+}
+
+.pl2 {
+    right: 0px;
+    top: 165px;
+}
+
+.match {
+    width: 100%;
+    top: 275px;
+    text-shadow: black 2px 2px;
+}

@@ -1,0 +1,27 @@
+full roster donation ironman
+Grand Finals - Best of 5||Grand Finals
+Grand Finals Reset - Best of 5||Grand Finals
+Losers Bracket - Best of 3||Losers Bracket
+Losers Finals - Best of 5||Losers Finals
+Losers Quarterfinals - Best of 3||Losers Quarterfinals
+Losers Quarterfinals - Best of 5||Losers Quarterfinals
+Losers Semifinals - Best of 5||Losers Semifinals
+Losers Top 12 - Best of 3||Losers Top 12
+Losers Top 12 - Best of 5||Losers Top 12
+Losers Top 16 - Best of 3||Losers Top 16
+Losers Top 16 - Best of 5||Losers Top 16
+Losers Top 8 - Best of 3||Losers Top 8
+Losers Top 8 - Best of 5||Losers Top 8
+Pool A Round Robin - Best of 5||Pool A Round Robin
+Pool B Round Robin - Best of 5||Pool B Round Robin
+Pool C Round Robin - Best of 5||Pool C Round Robin
+Pool D Round Robin - Best of 5||Pool D Round Robin
+rando bo5
+rando ft5
+Winners Bracket - Best of 3||Winners Bracket
+Winners Bracket - Best of 5||Winners Bracket
+Winners Finals - Best of 5||Winners Finals
+Winners Quarterfinals - Best of 3||Winners Quarterfinals
+Winners Quarterfinals - Best of 5||Winners Quarterfinals
+Winners Semifinals - Best of 3||Winners Semifinals
+Winners Semifinals - Best of 5||Winners Semifinals

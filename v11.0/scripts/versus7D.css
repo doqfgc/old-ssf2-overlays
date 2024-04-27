@@ -1,0 +1,85 @@
+.full { position: absolute; width: 2160px; height: 125px; /*background-color: magenta;*/ }
+.testcy { position: absolute; width: 2160px; height: 1080px; top: 125px; background-color: cyan; }
+.btm { bottom: 0px; opacity: 0; }
+.top { top: 0px; opacity: 1; left: 0px; }
+
+.flash {
+    position: absolute;
+    width: 2160px;
+    height: 125px;
+    background-image: url(../images/flash.png);
+    opacity: 0;
+    z-index: 3;
+}
+
+.namebox {
+    width: 380px;
+    height: 89px;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 31px;
+    transition: top 5000ms, transform 1000ms;
+    transform: rotate3d(1,0,0,90deg);
+    z-index: 1;
+}
+
+.p1n {
+    background-image: url('../images/p1name.png');
+    left: 609px;
+    transition: left 5000ms, top 5000ms, transform 1000ms;
+}
+.p2n {
+    background-image: url('../images/p2name.png');
+    right: 609px;
+    transition: right 5000ms, top 5000ms, transform 1000ms;
+}
+.scorebox {
+    position: absolute;
+    top: 18px;
+    left: 961px;
+    width: 232px;
+    height: 78px;
+    background-repeat: no-repeat;
+    background-image: url('../images/scorebox.png');
+    transition: top 5000ms, transform 1000ms;
+    transform: rotate3d(1,0,0,90deg);
+    z-index: -1;
+}
+.pname {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 8px;
+    opacity: 0;
+}
+.pname2 {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 38px;
+    opacity: 0;
+}
+.scoredash {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: 48px;
+}
+.scorenum {
+    position: absolute;
+    width: 45%;
+    font-size: 48px;
+}
+.scoremain {
+    position: relative;
+    left: 7px;
+    top: 18px;
+    opacity: 0;
+}
+.p1s {
+    text-align: right;
+}
+.p2s {
+    text-align: left;
+    right: 0;
+}

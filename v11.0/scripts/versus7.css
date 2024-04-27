@@ -1,0 +1,53 @@
+.full { position: absolute; width: 2160px; height: 125px; /*background-color: magenta;*/ }
+.testcy { position: absolute; width: 2160px; height: 1080px; top: 125px; background-color: cyan; }
+.btm { bottom: 0px; opacity: 0; }
+.top { top: 0px; opacity: 1; left: 0px; }
+
+
+.namebox {
+    width: 620px;
+    background-repeat: no-repeat;
+    transition: top 5000ms, opacity 1000ms;
+    opacity: 0;
+    z-index: 1;
+}
+
+.infobox {
+    font-size: 24px;
+    text-align: right;
+    position: relative;
+    right: 7px;
+}
+
+.p1n {
+    left: 0;
+    transition: left 5000ms, top 5000ms, transform 1000ms;
+}
+.p2n {
+    left: 0;
+    transition: right 5000ms, top 5000ms, transform 1000ms;
+}
+.scorebox {
+    position: absolute;
+    left: 961px;
+    width: 700px;
+    height: 115px;
+    background-repeat: no-repeat;
+    background-color: black;
+    transition: top 5000ms, opacity 1000ms;
+    opacity: 0;
+    z-index: -1;
+}
+.pname {
+    display: inline-block;
+    width: 100%;
+    text-align: right;
+    opacity: 0;
+}
+.scorenum {
+    display: inline-block;
+    width: 64px;
+    font-size: 48px;
+    text-align: center;
+    right: 0;
+}

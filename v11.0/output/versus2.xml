@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<versus2>
+	<player1>tillurman</player1>
+	<player1A>tillurman</player1A>
+	<player1B />
+	<player2>jmac</player2>
+	<player2A>jmac</player2A>
+	<player2B />
+	<score1>0</score1>
+	<score1A>0</score1A>
+	<score1B />
+	<score2>3</score2>
+	<score2A>3</score2A>
+	<score2B />
+	<image1>blackmage</image1>
+	<image1A>blackmage</image1A>
+	<image1B />
+	<image2>blackmage</image2>
+	<image2A>blackmage</image2A>
+	<image2B />
+	<match>main bracket - final</match>
+	<matchA>main bracket - final</matchA>
+	<matchB />
+	<game />
+	<gameA />
+	<gameB />
+	<visible>true</visible>
+	<time>637852121724351477</time>
+</versus2>

@@ -1,0 +1,132 @@
+<!-- 
+                                                                                            ,,                    
+`7MMF'  `7MMF'                                        .g8""8q.                            `7MM                    
+  MM      MM                                        .dP'    `YM.                            MM                    
+  MM      MM `7M'   `MF'`7MMpdMAo.  .gP"Ya `7Mb,od8 dM'      `MM `7M'   `MF'.gP"Ya `7Mb,od8 MM   ,6"Yb.`7M'   `MF'
+  MMmmmmmmMM   VA   ,V    MM   `Wb ,M'   Yb  MM' "' MM        MM   VA   ,V ,M'   Yb  MM' "' MM  8)   MM  VA   ,V  
+  MM      MM    VA ,V     MM    M8 8M""""""  MM     MM.      ,MP    VA ,V  8M""""""  MM     MM   ,pm9MM   VA ,V   
+  MM      MM     VVV      MM   ,AP YM.    ,  MM     `Mb.    ,dP'     VVV   YM.    ,  MM     MM  8M   MM    VVV    
+.JMML.  .JMML.   ,V       MMbmmd'   `Mbmmd'.JMML.     `"bmmd"'        W     `Mbmmd'.JMML. .JMML.`Moo9^Yo.  ,V     
+                ,V        MM                                                                              ,V      
+             OOb"       .JMML.                                                                         OOb"       
+
+	HyperOverlay ver.0.2.0
+	made without blood or sweat, but a lot of tears by doq
+
+	main.html - the foundation document in which all other components control or be controlled by
+
+	HyperOverlay is licensed under the terms of the MIT License; see the COPYING file for license details.
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Cache-control" content="max-age=0, must-revalidate, no-store">
+	<meta charset="utf-8">
+	<script src="scripts/_minified.js"></script>
+	<script src="scripts/_global.js"></script>
+	<script src="scripts/main.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="scripts/_global.css">
+	<link rel="stylesheet" type="text/css" href="scripts/main-display.css">
+	<link rel="stylesheet" type="text/css" href="scripts/main-controls.css">
+	<link rel="stylesheet" type="text/css" href="config.css">
+</head>
+
+<body>
+
+	<div class="full top">
+
+		<div class="controls">
+			<div class="topside">
+				<div class="leftside">
+					<div class="bigplayer">
+						<input class="inputglobal inputcrew" id="icr1">
+						<input class="inputglobal inputplayer" id="ip1"><br />
+						<input class="inputglobal inputbigscore" id="is1"><br />
+						<input class="inputglobal inputrecord" id="ir1w"> - <input class="inputglobal inputrecord" id="ir1l">
+					</div>
+				</div>
+				<div class="centreside">
+					<button class="buttonglobal" type="button" onclick="HyperOverlay.send('left', 'up');">&#9650;</button>
+					<button class="buttonglobal" type="button" onclick="HyperOverlay.send('right', 'up');">&#9650;</button><br />
+					<button class="buttonglobal" type="button" onclick="HyperOverlay.send('left', 'down');">&#9660;</button>
+					<button class="buttonglobal" type="button" onclick="HyperOverlay.send('right', 'down');">&#9660;</button><br />
+					<button class="buttonglobal" type="button" onclick="HyperOverlay.send('send');">Send</button><br />
+					<button class="buttonglobal" type="button" onclick="HyperOverlay.switchp();">Switch</button><br />
+					<input type="checkbox" class="check" id="recordon" onclick="HyperOverlay.togglerecord();">
+				</div>
+				<div class="rightside">
+					<div class="bigplayer">
+						<input class="inputglobal inputcrew" id="icr2">
+						<input class="inputglobal inputplayer" id="ip2"><br />
+						<input class="inputglobal inputbigscore" id="is2"><br />
+						<input class="inputglobal inputrecord" id="ir2w"> - <input class="inputglobal inputrecord" id="ir2l">
+					</div>
+				</div>
+			</div>
+			<div class="bottomside">
+				Enabled <input type="checkbox" class="check" id="overlaystatus" onclick="HyperOverlay.toggleOverlay();">
+				<input class="inputglobal inputgame" id="igg" list="setlist">
+				<datalist id="setlist">
+					<option value="Winners Bracket"></option>
+					<option value="Losers Bracket"></option>
+					<option value="Winners Quarterfinals"></option>
+					<option value="Winners Semifinals"></option>
+					<option value="Winners Finals"></option>
+					<option value="Losers Top 16"></option>
+					<option value="Losers Top 12"></option>
+					<option value="Losers Top 8"></option>
+					<option value="Losers Quarterfinals"></option>
+					<option value="Losers Semifinals"></option>
+					<option value="Losers Finals"></option>
+					<option value="Grand Finals"></option>
+				</datalist>
+				<input class="inputglobal inputset" id="imm" list="bolist">
+				<datalist id="bolist">
+					<option value="Best of 3"></option>
+					<option value="Best of 5"></option>
+					<option value="Best of 7"></option>
+					<option value="First to 3"></option>
+					<option value="First to 4"></option>
+					<option value="First to 5"></option>
+				</datalist>
+				<p id="hol-status">OK</p>
+			</div>
+		</div>
+
+		<div class="roundbox" id="mmb">
+			<div class="setbgcolor sbg"></div>
+			<div class="rtext settextcolor" id="gg"></div>
+			<div class="coverbox keycolor" id="cr"></div>
+		</div>
+
+		<div class="namebox p1n">
+			<div class="p1bgcolor bg" id="p1nb"></div>
+			<div class="pname p1textcolor" id="p1"></div>
+			<div class="pscore p1textcolor">
+				<div class="p1bgcolor pbg" id="p1b"></div>
+				<div class="scorenum p1s p1textcolor" id="s1"></div>
+				<div class="recnum p1r p1textcolor" id="r1"></div>
+			</div>
+			<div class="coverbox keycolor" id="c1"></div>
+		</div>
+
+		<div class="namebox p2n">
+			<div class="p2bgcolor bg" id="p2nb"></div>
+			<div class="pname p2textcolor" id="p2"></div>
+			<div class="pscore p2textcolor">
+				<div class="p2bgcolor pbg" id="p2b"></div>
+				<div class="scorenum p2s p2textcolor" id="s2"></div>
+				<div class="recnum p2r p2textcolor" id="r2"></div>
+			</div>
+			<div class="coverbox keycolor" id="c2"></div>
+		</div>
+	</div>
+
+	<script>
+		$('#overlaystatus').set('checked', false);
+		$('#recordon').set('checked', true);
+	</script>	
+</body>
+</html>

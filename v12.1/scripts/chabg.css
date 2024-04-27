@@ -1,0 +1,21 @@
+body {
+	position: relative; width: 1440px; height: 720px; margin: 0 auto; overflow: hidden; white-space: nowrap; color: #FFF;
+	font-family: "Segoe UI"; font-weight: bold; font-style: italic;
+	font-size: 36px; line-height: 42px; text-align: left;
+	text-transform: uppercase;
+}
+
+.full {
+    padding: 0;
+    margin: 0;
+}
+
+#ima1, #ima2 {
+    opacity: 0;
+    visibility: visible;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: opacity 1500ms;
+}

@@ -1,0 +1,55 @@
+.full { position: absolute; width: 2520px; height: 95px; }
+.btm { bottom: 0px; opacity: 0; }
+.top { top: 0px; opacity: 1; left: 0px; }
+
+.bgr { background: url('../images/redbar.gif'); background-repeat: no-repeat; width: 458px; height: 40px; }
+.bgb { background: url('../images/bluebar.gif'); background-repeat: no-repeat; width: 448px; height: 40px; }
+.bgw { background: url('../images/whitebar.png'); background-repeat: no-repeat; width: 449px; height: 37px; }
+.bgi { background: url('../images/longinfobar.png'); background-repeat: no-repeat; width: 1516px; height: 37px; }
+.transp1 { background: url('../images/transp1.png'); background-repeat: no-repeat; width: 31px; height: 38px; }
+.transp2 { background: url('../images/transp2.png'); background-repeat: no-repeat; width: 76px; height: 38px; }
+.lg { background: url('../images/logo2.png'); position: absolute; opacity: 0; top: -5px; left: 1205px; background-repeat: no-repeat; width: 111px; height: 110px; }
+.lg2 { background: url('../images/logo1.png'); position: absolute; opacity: 0; top: -5px; left: 1205px; background-repeat: no-repeat; width: 111px; height: 110px; }
+
+.white { position: absolute; left: 848px; top: 39px; opacity: 0; }
+.red { position: absolute; left: 848px; top: 37px; opacity: 0; }
+.blue { position: absolute; left: 857px; top: 37px; opacity: 0; }
+.infowhite { position: absolute; left: 1522px; top: 39px; opacity: 0; }
+
+.redt { position: absolute; left: 389px; top: 1px; }
+.bluet { position: absolute; left: 379px; top: 1px; }
+.whitet { position: absolute; left: 424px; top: 0; }
+
+.whiteleft { position: absolute; left: 0px; top: 39px; opacity: 0; background: url('../images/whiteleft.png'); 
+	background-repeat: no-repeat; width: 1228px; height: 37px; }
+.whiteright { position: absolute; left: 1289px; top: 39px; opacity: 0; background: url('../images/whiteright.png'); 
+	background-repeat: no-repeat; width: 2520px; height: 37px; }
+.whiteleft2 { position: absolute; left: 0px; top: 39px; opacity: 0; background: url('../images/whiteleft2.png'); 
+	background-repeat: no-repeat; width: 1228px; height: 37px; }
+.whiteright2 { position: absolute; left: 1954px; top: 39px; opacity: 0; background: url('../images/whiteright.png'); 
+	background-repeat: no-repeat; width: 2520px; height: 37px; }
+
+.game { position: absolute; width: 449px; height: 38px; }
+.game1 { top: 0px; left: 0px; text-align: center; color: black; }
+
+.chars { position: absolute; width: 600px; height: 110px; top: 1px; }
+.char1 { left: 0px; background: url('../icons/blank.png'); }
+.char2 { left: 0px; background: url('../icons/blank.png'); }
+
+.match { position: absolute; width: 1516px; height: 38px; }
+.match1 { top: 0px; left: 0px; text-align: center; color: black; }
+
+.player { position: absolute; width: 400px; height: 38px; text-shadow: 2px 2px black;}
+.player1 { top: 1px; left: 135px; text-align: left; }
+.player2 { top: 1px; left: 135px; text-align: left; }
+.player1b { top: 38px; left: 135px; text-align: left; }
+.player2b { top: 38px; left: 135px; text-align: left; }
+
+.score { position: absolute; width: 60px; height: 38px; text-align: center; }
+.score1 { top: 1px; right: 0px; opacity: 1; }
+.score2 { top: 1px; right: 0px; opacity: 1; }
+
+.dummy { opacity: 0; }
+
+.over { position: absolute; left: 125px; top: -36px; background: url('../images/over.png'); width: 255px; height: 37px; }
+.under { position: absolute; left: 125px; top: 39px; background: url('../images/under.png'); width: 255px; height: 37px; }

@@ -1,0 +1,91 @@
+.full { position: absolute; width: 2160px; height: 125px; /*background-color: magenta;*/ }
+.testcy { position: absolute; width: 2160px; height: 1080px; top: 125px; background-color: cyan; }
+.btm { bottom: 0px; opacity: 0; }
+.top { top: 0px; opacity: 1; left: 0px; }
+
+.namebox {
+    width: 700px;
+    height: 55px;
+    background-repeat: no-repeat;
+    position: absolute;
+    transition: top 5000ms;
+    opacity: 0;
+}
+
+.roundbox {
+    width: 539px;
+    height: 35px;
+    background-repeat: no-repeat;
+    position: absolute;
+    background-image: url('../images/blackbar.png');
+    top: 30px;
+    left: 795px;
+    opacity: 0;
+    transition: opacity 300ms;
+}
+.rtext {
+    position: absolute;
+    top: -5px;
+    font-size: 24px;
+    left: 20px;
+}
+.p1n {
+    background-image: url('../images/redbar.png');
+    top: 10px;
+    left: 130px;
+    transition: opacity 300ms;
+}
+.p2n {
+    background-image: url('../images/bluebar.png');
+    top: 65px;
+    left: 230px;
+    transition: opacity 300ms;
+}
+.pname {
+    position: absolute;
+    width: 100%;
+    text-align: left;
+    top: 6px;
+    left: 30px;
+    opacity: 0;
+}
+.pname small {
+    font-size: 24px;
+}
+.scorenum {
+    position: absolute;
+    width: 15%;
+    font-size: 56px;
+    top: 4px;
+    right: 0;
+    text-align: center;
+}
+.pscore {
+    width: 700px;
+    height: 55px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#p1b {
+    background-image: url('../images/redbar2.png');
+}
+#p2b {
+    background-image: url('../images/bluebar2.png');
+}
+.recnum {
+    text-align: center;
+    font-weight: normal;
+    font-size: 24px;
+    position: absolute;
+    top: 6px;
+    right: 90px;
+    width: 10%;
+}
+
+#p1, #s1, #r1 {
+    color: #ffe6e6;
+}
+#p2, #s2, #r2 {
+    color: #e6e6ff;
+}

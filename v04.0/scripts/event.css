@@ -1,0 +1,8 @@
+.full { position: absolute; width: 3360px; height: 80px; }
+.btm { top: 80px; }
+
+.events { background: url('../images/mainbarlongint.png'); }
+
+.events .event { position: absolute; width: 3360px; height: 80px; }
+.events .event1 { top: 35px; left: 625px; opacity: 0; }
+.events .event2 { top: 35px; right: 625px; opacity: 0; }

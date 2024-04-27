@@ -1,0 +1,2 @@
+Now Playing: %song%
+Now Playing: Wilkinson - Hopelessly Coping

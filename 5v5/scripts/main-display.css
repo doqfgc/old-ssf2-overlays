@@ -1,0 +1,135 @@
+/*                                                                          ,,                    
+  .g8"""bgd                           .g8""8q.                            `7MM                    
+.dP'     `M                         .dP'    `YM.                            MM                    
+dM'       ` ,pW"Wq.`7Mb,od8 .gP"Ya  dM'      `MM `7M'   `MF'.gP"Ya `7Mb,od8 MM   ,6"Yb.`7M'   `MF'
+MM         6W'   `Wb MM' "',M'   Yb MM        MM   VA   ,V ,M'   Yb  MM' "' MM  8)   MM  VA   ,V  
+MM.        8M     M8 MM    8M"""""" MM.      ,MP    VA ,V  8M""""""  MM     MM   ,pm9MM   VA ,V   
+`Mb.     ,'YA.   ,A9 MM    YM.    , `Mb.    ,dP'     VVV   YM.    ,  MM     MM  8M   MM    VVV    
+  `"bmmmd'  `Ybmd9'.JMML.   `Mbmmd'   `"bmmd"'        W     `Mbmmd'.JMML. .JMML.`Moo9^Yo.  ,V     
+                                                                                          ,V      
+                                                                                       OOb"         
+	CoreOverlay ver.1.1.0
+	made without blood or sweat, but a lot of tears by doc norberg
+
+	main-display.css - css code that handles the displayed overlay (what the stream sees)
+
+	CoreOverlay is licensed under the terms of the MIT License; see the COPYING file for license details.
+*/
+
+body {
+	position: relative; width: 1920px; margin: 0 auto; overflow: hidden; white-space: nowrap; color: #FFF;
+	font-family: "MADE Outer Sans"; font-style: italic; font-weight: 900;
+	font-size: 48px; line-height: 42px; text-align: left;
+	text-transform: uppercase;
+}
+
+.overflow { overflow: hidden; text-overflow: ellipsis; }
+
+.full { position: absolute; width: 1920px; height: 175px;
+     /* background-color: magenta; /* enable this for a debug background */
+}
+.btm { bottom: 0px; opacity: 0; }
+.top { top: 0px; opacity: 1; left: 0px; }
+
+.overlay {
+    position: absolute;
+    width: 1920px;
+    height: 200px;
+    right: 0px;
+    opacity: 1;
+}
+
+.nrpa { background-repeat: no-repeat; position: absolute; opacity: 1; }
+.scorenum {
+    position: absolute;
+    width: 80px;
+    font-size: 84px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 500ms;
+    left: -7px;
+    top: 3px;
+}
+.bigbar {
+    position: absolute;
+    left: 0;
+    top: 20px;
+    width: 1645px;
+    height: 50px;
+    background: #000;
+    opacity: 0;
+    transition: opacity 1000ms, top 1000ms;
+}
+.littlebar {
+    position: absolute;
+    left: 0;
+    top: 20px;
+    width: 145px;
+    height: 50px;
+    background: #000;
+    opacity: 0;
+    transition: opacity 1000ms, top 1000ms;
+}
+.p1c { position: absolute; width: 715px; left: 45px; top: 13px; opacity: 0; transition: opacity 1000ms; }
+.p2c { position: absolute; width: 715px; left: 45px; top: 75px; opacity: 0; transition: opacity 1000ms; }
+    .pname { line-height: 32px; }
+    .tname {
+        opacity: 0;
+        font-size: 16px;
+        line-height: 16px;
+    }
+    .gtext { margin: -3px 3px 0 3px; }
+    .recnum { text-align: center; }
+    .namebox, .pbg { 
+        transition: width 700ms, left 1000ms, right 1000ms, top 1000ms, filter 500ms;
+        height: 55px; font-size: 36px; overflow: hidden;
+    }
+    .recbox, .rbg { 
+        transition: width 700ms, left 1000ms, right 1000ms, top 1000ms, filter 500ms, opacity 500ms;
+        height: 40px; font-size: 24px; overflow: hidden; opacity: 0;
+    }
+    .gamebox, .gbg { 
+        transition: width 700ms, left 1000ms, right 1000ms, top 1000ms, filter 500ms;
+        height: 35px; font-size: 16px; overflow: hidden; 
+    }
+    .p1nc, .p2nc { left: 5px; top: 2px; width: 705px; }
+    .p1nb, .p2nb {
+        position: absolute; top: 0px; width: 0px; height: 55px; opacity: 0;
+        transition: opacity 1000ms, top 1000ms, width 1000ms; left: 0; 
+    }
+    .p1nb, .sp1 { 
+        background: #803; }
+    .p2nb, .sp2 { 
+        background: #058; }
+
+    .mc { position: absolute; left: 50%; transform: translateX(-50%); 
+          width: 215px; }
+    .bc { position:absolute; right: 1160px; top: 136px;
+        background-color: #000; width: 0px; height: 16px; opacity: 0;
+        transition: width 1000ms, top 1000ms, opacity 1000ms, right 1000ms; }
+    .mmc { left: 5px; bottom: -8px; }
+    .ggc { right: 5px; bottom: -8px; }
+
+.sbg {
+    position: absolute;
+    width: 80px; height: 55px;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 1000ms;
+}
+.sb5 { left: 0px; } .sb4 { left: 85px; } .sb3 { left: 170px; } .sb2 { left: 255px; } .sb1 { left: 340px; }
+.p1s { position: absolute; top: 13px; left: 340px; transition: left 1000ms; }
+.p2s { position: absolute; top: 75px; left: 340px; transition: left 1000ms; }
+#p1n, #p2n, #tt, #gg {
+    position: relative;
+}
+#gg, #tt { text-align: right; text-transform: initial; }
+#gg, #tt {
+    transition: opacity 500ms, right 500ms, color 500ms; 
+}
+#p2n, #p1n, #p2t, #p1t {
+    transition: opacity 500ms, left 500ms, color 500ms; 
+}
+#s1, #s2 {
+    transition: color 500ms, opacity 1000ms; 
+}

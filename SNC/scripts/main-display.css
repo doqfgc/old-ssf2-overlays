@@ -1,0 +1,266 @@
+/* 
+                                                                                            ,,                    
+`7MMF'  `7MMF'                                        .g8""8q.                            `7MM                    
+  MM      MM                                        .dP'    `YM.                            MM                    
+  MM      MM `7M'   `MF'`7MMpdMAo.  .gP"Ya `7Mb,od8 dM'      `MM `7M'   `MF'.gP"Ya `7Mb,od8 MM   ,6"Yb.`7M'   `MF'
+  MMmmmmmmMM   VA   ,V    MM   `Wb ,M'   Yb  MM' "' MM        MM   VA   ,V ,M'   Yb  MM' "' MM  8)   MM  VA   ,V  
+  MM      MM    VA ,V     MM    M8 8M""""""  MM     MM.      ,MP    VA ,V  8M""""""  MM     MM   ,pm9MM   VA ,V   
+  MM      MM     VVV      MM   ,AP YM.    ,  MM     `Mb.    ,dP'     VVV   YM.    ,  MM     MM  8M   MM    VVV    
+.JMML.  .JMML.   ,V       MMbmmd'   `Mbmmd'.JMML.     `"bmmd"'        W     `Mbmmd'.JMML. .JMML.`Moo9^Yo.  ,V     
+                ,V        MM                                                                              ,V      
+             OOb"       .JMML.                                                                         OOb"       
+
+	HyperOverlay ver.0.2.0
+	made without blood or sweat, but a lot of tears by doq
+
+	main-display.css - css code that handles the displayed overlay (what the stream sees)
+
+	HyperOverlay is licensed under the terms of the MIT License; see the COPYING file for license details.
+*/
+body {
+	position: relative; width: 2160px; margin: 0 auto; overflow: hidden; white-space: nowrap; color: #FFF;
+	font-family: "Nova Square"; font-style: italic;
+	font-size: 36px; line-height: 42px; text-align: left;
+	text-transform: uppercase;
+}
+
+.overflow { overflow: hidden; text-overflow: ellipsis; }
+.full { position: absolute; width: 2160px; height: 125px; /*background-color: magenta;*/ }
+.btm { bottom: 0px; opacity: 0; }
+.top { top: 0px; opacity: 1; left: 0px; }
+
+.p1textcolor {
+    color: #ffffffcc;
+}
+
+.p1bgcolor {
+    background-color: #1a0000;
+}
+
+.p2textcolor {
+    color: #ffffffcc;
+}
+
+.p2bgcolor {
+    background-color: #00001a;
+}
+
+.settextcolor {
+    color: white;
+}
+
+.setbgcolor {
+    background-color: black;
+}
+
+.keycolor {
+    /* modify this if you're having trouble keying out transition colours without also keying out overlay colours */
+    background-color: #FF00FF;
+}
+
+.coverbox {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    visibility: visible;
+    transition: left 1000ms, right 1000ms;
+    transform: skewX(-15deg);
+    left: 15px;
+}
+
+#crl {
+    left: 4px;
+    width: 50%;
+}
+
+#crr {
+    left: calc(50% + 4px);
+    width: 50%;
+}
+
+.namebox {
+    width: 500px;
+    height: 55px;
+    background-repeat: no-repeat;
+    position: absolute;
+    opacity: 1;
+}
+
+.bg {
+    width: 500px;
+    height: 100%;
+    transform: skewX(-15deg);
+    position: absolute;
+    left: 15px;
+}
+
+.sbg {
+    width: 725px;
+    height: 100%;
+    transform: skewX(-15deg);
+    position: absolute;
+    left: 5px;
+}
+
+.roundbox {
+    width: 725px;
+    height: 35px;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 1;
+}
+.rtext {
+    position: absolute;
+    top: -3px;
+    font-size: 20px;
+    width: 725px;
+    text-align: center;
+}
+.p1n {
+    /*
+    top: 50px;
+    left: 475px;
+    */
+    top: 67px;
+    left: 580px;
+    transition: opacity 300ms, top 500ms, left 500ms;
+}
+.p2n {
+    /*
+    top: 85px;
+    right: 475px;
+    */
+    top: 67px;
+    right: 580px;
+    transition: opacity 300ms, top 500ms, right 500ms;
+}
+.pname {
+    position: absolute;
+    width: 100%;
+    top: -1px;
+    opacity: 0;
+    transition: opacity 500ms, left 500ms, right 500ms;
+}
+#p1 {
+    text-align: right;
+    right: -10px;
+}
+#p2 {
+    left: 15px;
+    top: 15px;
+}
+.cfname {
+    position: absolute;
+    width: 100%;
+    top: 7px;
+    opacity: 0;
+    transition: opacity 500ms, left 500ms, right 500ms, letter-spacing 1500ms;
+    letter-spacing: 0px;
+}
+#cr1f {
+    text-align: right;
+    right: -5px;
+}
+#cr2f {
+    left: 20px;
+}
+.pname small {
+    font-size: 24px;
+}
+.centrescore {
+    position: absolute;
+    width: 215px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.scorenum {
+    position: absolute;
+    width: 120px;
+    font-size: 108px;
+    text-align: center;
+    color: #d0d0d0a0;
+    font-family: 'Squada One';
+}
+.p1s {
+    top: 58px;
+    left: 5px;
+}
+.p2s {
+    top: 88px;
+    right: -7px;
+}
+#s1d2, #s1d1, #s2d2, #s2d1 {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    display: inline-block;
+}
+#s1d1, #s2d1 {
+    width: 51px;
+}
+.cname {
+    width: 500px;
+    position: absolute;
+    font-size: 16px;
+    line-height: 16px;
+}
+#cr1 {
+    text-align: right;
+    right: -3px;
+    bottom: 1px;
+}
+#cr2 {
+    text-align: left;
+    left: 22px;
+    top: 3px;
+}
+.cr1p, .cr2p {
+    display: inline-block;
+}
+.cr1p::before {
+    content: "\00a0";
+}
+.cr2p::after {
+    content: "\00a0";
+}
+#cr1p1, #cr1p2, #cr1p3, #cr1p4, #cr1p5 {
+    position: relative;
+    right: 0;
+    opacity: 0;
+    width: auto;
+    transition: opacity 500ms, width 500ms;
+}
+#cr2p1, #cr2p2, #cr2p3, #cr2p4, #cr2p5 {
+    position: relative;
+    left: 0;
+    opacity: 0;
+    width: auto;
+    transition: opacity 500ms, width 500ms;
+}
+.pscore {
+    width: 700px;
+    height: 55px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.recnum {
+    text-align: center;
+    font-weight: normal;
+    font-size: 24px;
+    position: absolute;
+    top: 7px;
+    width: 10%;
+}
+.p1r {
+    right: 180px;
+}
+.p2r {
+    left: 5px;
+}

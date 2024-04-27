@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<versus2>
+	<player1>TillurMan</player1>
+	<player1A>TillurMan</player1A>
+	<player1B />
+	<player2>shirobby</player2>
+	<player2A>shirobby</player2A>
+	<player2B />
+	<score1>0</score1>
+	<score1A>0</score1A>
+	<score1B />
+	<score2>0</score2>
+	<score2A>0</score2A>
+	<score2B />
+	<image1>fox</image1>
+	<image1A>fox</image1A>
+	<image1B />
+	<image2>donkeykong</image2>
+	<image2A>donkeykong</image2A>
+	<image2B />
+	<match>MGCS: Just Vibin'</match>
+	<matchA>MGCS: Just Vibin'</matchA>
+	<matchB />
+	<game>Grand Finals - Best of 5||Grand Finals</game>
+	<gameA>Grand Finals - Best of 5</gameA>
+	<gameB>Grand Finals</gameB>
+	<visible>true</visible>
+	<time>638275474288614969</time>
+</versus2>

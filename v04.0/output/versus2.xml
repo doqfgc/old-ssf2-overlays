@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<versus2>
+	<player1>LOU Ace2020</player1>
+	<player1A>LOU Ace2020</player1A>
+	<player1B />
+	<player2>Ichigo Ramen</player2>
+	<player2A>Ichigo Ramen</player2A>
+	<player2B />
+	<score1>1</score1>
+	<score1A>1</score1A>
+	<score1B />
+	<score2>1</score2>
+	<score2A>1</score2A>
+	<score2B />
+	<image1>charfox</image1>
+	<image1A>charfox</image1A>
+	<image1B />
+	<image2>charmarth</image2>
+	<image2A>charmarth</image2A>
+	<image2B />
+	<match />
+	<matchA />
+	<matchB />
+	<game>Mediocre Bracket||Super Vanilla Album 4</game>
+	<gameA>Mediocre Bracket</gameA>
+	<gameB>Super Vanilla Album 4</gameB>
+	<visible>true</visible>
+	<time>636534227182069458</time>
+</versus2>

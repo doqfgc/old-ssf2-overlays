@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<versus2>
+	<player1>Flavien||10-6</player1>
+	<player1A>Flavien</player1A>
+	<player1B>10-6</player1B>
+	<player2>{{SC}} Astral||6-8</player2>
+	<player2A>{{SC}} Astral</player2A>
+	<player2B>6-8</player2B>
+	<score1>3</score1>
+	<score1A>3</score1A>
+	<score1B />
+	<score2>0</score2>
+	<score2A>0</score2A>
+	<score2B />
+	<image1>blackmage</image1>
+	<image1A>blackmage</image1A>
+	<image1B />
+	<image2>blackmage</image2>
+	<image2A>blackmage</image2A>
+	<image2B />
+	<match />
+	<matchA />
+	<matchB />
+	<game>Losers Top 12 - Best of 5||Losers Top 12</game>
+	<gameA>Losers Top 12 - Best of 5</gameA>
+	<gameB>Losers Top 12</gameB>
+	<visible>true</visible>
+	<time>637464877363108357</time>
+</versus2>

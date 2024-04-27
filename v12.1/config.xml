@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<settings>
+		<enableXml>True</enableXml>
+		<enableWss>False</enableWss>
+		<ontop>True</ontop>
+		<snapto>False</snapto>
+		<prefix>SSF2</prefix>
+		<versus>VS</versus>
+		<teams>&amp;</teams>
+		<aorb>A</aorb>
+	</settings>
+	<tabs>
+		<item type="trophy2i" name="versus2" auto="true">
+			<head>versus2</head>
+		</item>
+		<item type="trophy4" name="doubles" auto="true">
+			<head>Doubles</head>
+		</item>
+		<item type="text" name="event" auto="true">
+			<head>event</head>
+		</item>
+		<item type="monitor" name="sysmon" auto="true">
+			<head>Sysmon</head>
+		</item>
+		<item type="timer" name="clock" auto="true">
+			<head>Clock</head>
+		</item>
+		<item type="music" name="sonq" auto="true">
+			<head>sonq</head>
+		</item>
+		<item type="music" name="winamp" auto="true">
+			<head>Winamp</head>
+		</item>
+		<item type="text" name="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" auto="true">
+			<head>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</head>
+		</item>
+		<item type="counter" name="wl" auto="true">
+			<head>WL</head>
+		</item>
+	</tabs>
+</config>

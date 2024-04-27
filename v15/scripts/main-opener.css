@@ -1,0 +1,22 @@
+/* pfewpkjfwpoefwef */
+
+.opener {
+    position: absolute;
+    top: 20px;
+    left: 40%;
+    transform: translateX(-50%) scale(0.8);
+    opacity: 0;
+    transition: transform 2000ms, opacity 1000ms;
+}
+
+.ffcletter {
+    position: relative;
+    transform: scale(0.8);
+    transition: transform 1000ms;
+}
+
+.theffclogo {
+    position: relative;
+    top: 15px;
+    width: 75px;
+}

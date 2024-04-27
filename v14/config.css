@@ -1,0 +1,18 @@
+/*
+    OVERLAY V13
+    CUSTOM CONFIG
+
+    BY DOC
+    THE LAB CREATIVES
+
+    most common colour names work, along with the following formats:
+    #RRGGBB hex code
+    #RRGGBBAA adds alpha transparency
+    rgb(red, green, blue) - where red, green, and blue are between 0 and 255
+    rgba(red, green, blue, alpha) - same as above, except alpha is between 0.0 and 1.0
+    hsl(hue, sat, lum) - if you're WEIRD, also hsla(hue, sat, lum, alpha)
+
+    generally only black, white look good for colour names; use a format for others
+
+    modifying anything but the values themselves may have unintended side effects or even completely break the overlay.
+*/

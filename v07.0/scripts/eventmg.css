@@ -1,0 +1,16 @@
+.full { position: absolute; width: 2520px; height: 100px; }
+.btm { top: 0px; }
+
+.topbar { background: url('../images/mgbarred.png'); }
+.btmbar { background: url('../images/mgbarylw.png'); }
+
+/* topbg left = 1014px; btmbg left = 614px; topbg top = 0px; btmbg top = 50px; */
+
+/*.topbg { position: absolute; width: 893px; height: 50px; left: 1014px; }*/
+.topbg { position: absolute; width: 893px; height: 50px; left: 2521px; top: 25px; }
+.toptext { top: 48px; opacity: 0; width: 893px; color: #ffffff; text-align: center; line-height: 56px; }
+/*.btmbg { position: absolute; top: 50px; width: 893px; height: 50px; left: 614px; }*/
+.btmbg { position: absolute; width: 893px; height: 50px; left: -894px; top: 25px; }
+.btmtext { top: 48px; opacity: 0; width: 893px; color: #000000; text-align: center; line-height: 56px; }
+
+.dummy { width: 0; opacity: 0; left: -3000px; }

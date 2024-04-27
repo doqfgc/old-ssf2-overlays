@@ -1,0 +1,192 @@
+/*                                                                          ,,                    
+  .g8"""bgd                           .g8""8q.                            `7MM                    
+.dP'     `M                         .dP'    `YM.                            MM                    
+dM'       ` ,pW"Wq.`7Mb,od8 .gP"Ya  dM'      `MM `7M'   `MF'.gP"Ya `7Mb,od8 MM   ,6"Yb.`7M'   `MF'
+MM         6W'   `Wb MM' "',M'   Yb MM        MM   VA   ,V ,M'   Yb  MM' "' MM  8)   MM  VA   ,V  
+MM.        8M     M8 MM    8M"""""" MM.      ,MP    VA ,V  8M""""""  MM     MM   ,pm9MM   VA ,V   
+`Mb.     ,'YA.   ,A9 MM    YM.    , `Mb.    ,dP'     VVV   YM.    ,  MM     MM  8M   MM    VVV    
+  `"bmmmd'  `Ybmd9'.JMML.   `Mbmmd'   `"bmmd"'        W     `Mbmmd'.JMML. .JMML.`Moo9^Yo.  ,V     
+                                                                                          ,V      
+                                                                                       OOb"         
+	CoreOverlay ver.1.0.0
+	made without blood or sweat, but a lot of tears by doq
+
+	main-display.css - css code that handles the displayed overlay (what the stream sees)
+
+	CoreOverlay is licensed under the terms of the MIT License; see the COPYING file for license details.
+*/
+
+/*
+
+targets:
+
+centre
+    |- p1c, abs, right: 0, width: 50%
+    |   |- p1n, rel, right: 175px, top: 40px, width: 400px, height: 55px
+    |   |   \- p1nb, rel, right: 10px, top: 10px, width: 400px, height: 55px
+    |   |- p1r, rel, right: 100px, top: 50px, width: 70px, height: 40px
+    |   |   \- p1rb, rel, right: 5px, top: 5px, width: 70px, height: 40px
+    |   \- mm, rel, right: 50px, top: 110px, width: 300px, height: 35px
+    |       \- mmb, rel, right: 5px, top: 5px, width: 300px, height: 35px
+    |- s1
+    |- p2c, abs, left: 0, width: 50%
+    |   |- p2n, rel, left: 175px, top: 40px, width: 400px, height: 55px
+    |   |   \- p2nb, rel, left: 10px, top: 10px, width: 400px, height: 55px
+    |   |- p2r, rel, left: 100px, top: 50px, width: 70px, height: 40px
+    |   |   \- p2rb, rel, left: 5px, top: 5px, width: 70px, height: 40px
+    |   \- gg, rel, left: 50px, top: 110px, width: 300px, height: 35px
+    |       \- ggb, rel, left: 5px, top: 5px, width: 300px, height: 35px
+    \- s2
+acxslash, abs, top: 8px, left: 50%, transform: translateX(-50%)
+    
+I wonder if I can position both on the same side, and then flip p1 or p2 after the fact...
+probably not if I want to keep animation.
+
+*/
+
+body {
+	position: relative; width: 2160px; margin: 0 auto; overflow: hidden; white-space: nowrap; color: #FFF;
+	font-family: "Nova Square";
+	font-size: 48px; line-height: 42px; text-align: left;
+	text-transform: uppercase;
+}
+
+.overflow { overflow: hidden; text-overflow: ellipsis; }
+
+.full { position: absolute; width: 2160px; height: 175px; /*background-color: magenta;*/ }
+.btm { bottom: 0px; opacity: 0; }
+.top { top: 0px; opacity: 1; left: 0px; }
+
+.overlay {
+    position: absolute;
+    width: 2160px;
+    height: 200px;
+    right: 0px;
+    opacity: 1;
+}
+
+.inverted {
+    filter: invert(100%);
+}
+
+.nrpa { background-repeat: no-repeat; position: absolute; opacity: 1; }
+.scorenum { position: absolute; }
+.centreblock {
+    left: 50%;
+    top: 8px;
+    transform: translateX(-50%);
+    width: 240px;
+    height: 120px;
+    background-image: url('../images/acxslash.png');
+    opacity: 0;
+    transition: opacity 500ms, filter 500ms;
+}
+.p1-col { background-color: #803; }
+.p2-col { background-color: #058; }
+.gg-col { background-color: #fff; }
+.bg-col { background-color: #000; }
+.p1c { position: absolute; width: 50%; right: 50%; }
+.p2c { position: absolute; width: 50%; left: 50%; }
+    .pname { margin: 7px; }
+    .pname small {
+        font-size: 28px;
+        position: relative;
+        display: inline-block;
+        top: -4px;
+    }
+    .gtext { margin: -3px 3px 0 3px; }
+    .recnum { text-align: center; }
+    .namebox, .pbg { 
+        transition: width 700ms, left 1000ms, right 1000ms, top 1000ms, filter 500ms;
+        height: 55px; font-size: 40px; overflow: hidden;
+    }
+    .recbox, .rbg { 
+        transition: width 700ms, left 1000ms, right 1000ms, top 1000ms, filter 500ms;
+        height: 40px; font-size: 24px; overflow: hidden;
+    }
+    .gamebox, .gbg { 
+        transition: width 700ms, left 1000ms, right 1000ms, top 1000ms, filter 500ms;
+        height: 35px; font-size: 20px; color: #000; overflow: hidden; 
+    }
+        .s-p1nc { right: 975px; top: 40px; width: 0px; }
+            #p1n, #tt { text-align: right; }
+            .s-p1nb { right: 975px; top: 40px; width: 0px; }
+        .s-p1rc { right: 100px; top: 50px; width: 70px; visibility: hidden; }
+            .s-p1rb { right: 100px; top: 50px; width: 70px; visibility: hidden; }
+        .s-mmc { right: 700px; top: 110px; width: 0px; }
+            .s-mmb { right: 700px; top: 110px; width: 0px; }
+        .s-p2nc { left: 975px; top: 40px; width: 0px; }
+            .s-p2nb { left: 975px; top: 40px; width: 0px; }
+        .s-p2rc { left: 100px; top: 50px; width: 70px; visibility: hidden; }
+            .s-p2rb { left: 100px; top: 50px; width: 70px; visibility: hidden; }
+        .s-ggc { left: 700px; top: 110px; width: 0px; }
+            .s-ggb { left: 700px; top: 110px; width: 0px; }
+
+        .n-p1nb { right: 100px; top: 40px; width: 400px; }
+        .n-p1rb { right: 100px; top: 50px; width: 70px; }
+        .n-mmb { right: 50px; top: 110px; width: 300px; }
+        .n-p2nb { left: 100px; top: 40px; width: 400px; }
+        .n-p2rb { left: 100px; top: 50px; width: 70px; }
+        .n-ggb { left: 50px; top: 110px; width: 300px; }
+
+        .t-p1nc { right: 100px; top: 40px; width: 400px; }
+            .t-p1nb { right: 110px; top: 50px; width: 400px; }
+        .t-p1rc { right: 100px; top: 50px; width: 70px; }
+            .t-p1rb { right: 105px; top: 55px; width: 70px; }
+        .t-mmc { right: 50px; top: 110px; width: 300px; }
+            .t-mmb { right: 55px; top: 115px; width: 300px; }
+        .t-p2nc { left: 100px; top: 40px; width: 400px; }
+            .t-p2nb { left: 110px; top: 50px; width: 400px; }
+        .t-p2rc { left: 100px; top: 50px; width: 70px; }
+            .t-p2rb { left: 105px; top: 55px; width: 70px; }
+        .t-ggc { left: 50px; top: 110px; width: 300px; }
+            .t-ggb { left: 55px; top: 115px; width: 300px; }
+
+        .rt-p1nc { right: 175px; top: 40px; width: 400px; }
+            .rt-p1nb { right: 185px; top: 50px; width: 400px; }
+        .rt-p2nc { left: 175px; top: 40px; width: 400px; }
+            .rt-p2nb { left: 185px; top: 50px; width: 400px; }
+
+        .f-p1nc { right: 100px; top: 40px; width: 0px; }
+            .f-p1nb { right: 110px; top: 50px; width: 0px; }
+        .f-p1rc { right: 100px; top: 50px; width: 0px; }
+            .f-p1rb { right: 105px; top: 55px; width: 0px; }
+        .f-mmc { right: 50px; top: 110px; width: 0px; }
+            .f-mmb { right: 55px; top: 115px; width: 0px; }
+        .f-p2nc { left: 100px; top: 40px; width: 0px; }
+            .f-p2nb { left: 110px; top: 50px; width: 0px; }
+        .f-p2rc { left: 100px; top: 50px; width: 0px; }
+            .f-p2rb { left: 105px; top: 55px; width: 0px; }
+        .f-ggc { left: 50px; top: 110px; width: 0px; }
+            .f-ggb { left: 55px; top: 115px; width: 0px; }
+
+        .rf-p1nc { right: 175px; top: 40px; width: 0px; }
+            .rf-p1nb { right: 185px; top: 50px; width: 0px; }
+        .rf-p2nc { left: 175px; top: 40px; width: 0px; }
+            .rf-p2nb { left: 185px; top: 50px; width: 0px; }
+
+.scorenum {
+    position: absolute;
+    width: 120px;
+    font-size: 108px;
+    text-align: center;
+    font-family: 'Squada One';
+    color: #00ff00;
+}
+.p1s {
+    top: 44px;
+    left: 980px;
+}
+.p2s {
+    top: 44px;
+    right: 980px;
+}
+#p1n, #p2n, #tt, #gg {
+    position: relative;
+}
+#p1n, #tt {
+    transition: opacity 500ms, right 500ms; 
+}
+#p2n, #gg {
+    transition: opacity 500ms, left 500ms; 
+}

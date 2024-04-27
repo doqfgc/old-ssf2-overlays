@@ -1,0 +1,12 @@
+.full { position: absolute; width: 3840px; height: 250px; }
+.btm { top: 0px; }
+
+.events { background: url('../images/mainbar.png'); width: 7680px; }
+
+#evn { left: -2095px; }
+
+.events .event { position: absolute; width: 3840px; height: 135px; }
+.events .event1 { top: 70px; left: 0; opacity: 0; width: 1775px; text-align: right; }
+.events .event2 { top: 70px; right: 3840px; opacity: 0; width: 1775px; }
+.songs .songa { position: absolute; width: 3840px; height: 135px; }
+.songs .song { top: 70px; left: 350px; opacity: 0; width: 3500px; }

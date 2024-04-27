@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<versus2>
+	<player1>SenpaiCry||Cry</player1>
+	<player1A>SenpaiCry</player1A>
+	<player1B>Cry</player1B>
+	<player2>Prolific [W]||Plfc</player2>
+	<player2A>Prolific [W]</player2A>
+	<player2B>Plfc</player2B>
+	<score1>0</score1>
+	<score1A>0</score1A>
+	<score1B />
+	<score2>5</score2>
+	<score2A>5</score2A>
+	<score2B />
+	<image1>donkeykong</image1>
+	<image1A>donkeykong</image1A>
+	<image1B />
+	<image2>donkeykong</image2>
+	<image2A>donkeykong</image2A>
+	<image2B />
+	<match>none</match>
+	<matchA>none</matchA>
+	<matchB />
+	<game>Smash Island 50||Grand Finals</game>
+	<gameA>Smash Island 50</gameA>
+	<gameB>Grand Finals</gameB>
+	<visible>true</visible>
+	<time>637016668055054514</time>
+</versus2>

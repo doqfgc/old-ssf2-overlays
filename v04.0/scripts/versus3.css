@@ -1,0 +1,24 @@
+.full { position: absolute; width: 3360px; height: 80px; left: 0px }
+.btm { bottom: 0px; opacity: 0; }
+.top { top: 80px; opacity: 1; }
+
+.matches { background: url('../images/mainbarlong.png'); }
+
+.games .game { position: absolute; width: 785px; height: 50px; }
+.games .game1 { top: 35px; left: 2575px; }
+.games .game2 { top: 35px; left: -750px; opacity: 1; }
+
+.chars { position: absolute; width: 600px; height: 80px; top: 0px; }
+.char1 { left: 175px; background: url('../icons/blank.png'); }
+.char2 { left: 1375px; background: url('../icons/blank.png'); }
+
+.matches .match { position: absolute; width: 785px; height: 50px; }
+.matches .match1 { top: 20px; left: 3575px; font-size: 32px; }
+
+.players .player { position: absolute; width: 400px; height: 50px; }
+.players .player1 { top: 35px; left: 325px; text-align: left; }
+.players .player2 { top: 35px; left: 1525px; text-align: left; }
+
+.scores .score { position: absolute; width: 40px; height: 50px; font: bold 60px 'Logostile'; }
+.scores .score1 { top: 20px; left: 1325px; }
+.scores .score2 { top: 20px; left: 2525px; }

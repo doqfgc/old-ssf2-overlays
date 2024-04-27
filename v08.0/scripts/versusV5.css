@@ -1,0 +1,27 @@
+.full { position: absolute; width: 3840px; height: 250px; left: 0px }
+.btm { bottom: 0px; opacity: 0; }
+.top { top: 0px; opacity: 1; }
+
+.bg { background: url('../images/mainbar.png'); width: 7680px; left: -3840px; }
+.bgcr { background: url('../images/gamebar.png'); opacity: 0; }
+
+.games .game { position: absolute; width: 1175px; height: 135px; opacity: 0; text-align: center; }
+.games .game1 { top: 70px; left: 2400px; }
+.games .game2 { top: 24px; left: -750px; opacity: 1; }
+
+.chars { position: absolute; width: 600px; height: 135px; top: 65px; }
+.char1 { left: 0px; background: url('../icons/blank.png'); }
+.char2 { left: 1200px; background: url('../icons/blank.png'); }
+
+.match { position: absolute; width: 785px; height: 80px; }
+.match1 { top: 24px; left: 3575px; font-size: 32px; }
+
+.players .player { position: absolute; width: 1200px; height: 135px; opacity: 0; }
+.players .player1 { top: 70px; left: 36px; text-align: left; }
+.players .player2 { top: 70px; left: 1236px; text-align: left; }
+
+.scores .score { position: absolute; width: 60px; height: 80px; opacity: 0; text-align: center; }
+.scores .score1 { top: 70px; right: 2650px; }
+.scores .score2 { top: 70px; right: 1450px; }
+
+.dummy { opacity: 0; }

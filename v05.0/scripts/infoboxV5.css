@@ -1,0 +1,8 @@
+.full { position: absolute; width: 1153px; height: 60px; left: 0px; }
+.infobox { top: 0px; opacity: 1; top: 60px; left: -20px; }
+
+.bg { background: url('../images/infobar.png'); }
+
+.info { position: absolute; width: 1050px; height: 64px; left: 24px; top: 18px; color: #000; text-shadow: 0 0 0 #FFF; opacity: 0; font: 36px; }
+
+.dummy { opacity: 0; }

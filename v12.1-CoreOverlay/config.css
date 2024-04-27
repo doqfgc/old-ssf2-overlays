@@ -1,0 +1,52 @@
+/*
+    OVERLAY V12.1
+    CUSTOM CONFIG
+
+    BY DOC
+    THE LAB CREATIVES
+
+    most common colour names work, along with the following formats:
+    #RRGGBB hex code
+    #RRGGBBAA adds alpha transparency
+    rgb(red, green, blue) - where red, green, and blue are between 0 and 255
+    rgba(red, green, blue, alpha) - same as above, except alpha is between 0.0 and 1.0
+    hsl(hue, sat, lum) - if you're WEIRD, also hsla(hue, sat, lum, alpha)
+
+    generally only black, white look good for colour names; use a format for others
+
+    modifying anything but the values themselves may have unintended side effects or even completely break the overlay.
+*/
+
+.p1textcolor {
+    color: #ffe6e6;
+}
+
+.p1bgcolor {
+    background-color: #1a0000;
+}
+
+.p2textcolor {
+    color: #e6e6ff;
+}
+
+.p2bgcolor {
+    background-color: #00001a;
+}
+
+.settextcolor {
+    color: white;
+}
+
+.setbgcolor {
+    background-color: black;
+}
+
+.keycolor {
+    /* modify this if you're having trouble keying out transition colours without also keying out overlay colours */
+    background-color: #FF00FF;
+}
+
+#p1b, #p2b {
+    /* modify this if you're using a dark-on-light config */
+    filter: brightness(2.0);
+}

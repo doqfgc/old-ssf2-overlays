@@ -1,0 +1,98 @@
+/* 
+                                                                                            ,,                    
+`7MMF'  `7MMF'                                        .g8""8q.                            `7MM                    
+  MM      MM                                        .dP'    `YM.                            MM                    
+  MM      MM `7M'   `MF'`7MMpdMAo.  .gP"Ya `7Mb,od8 dM'      `MM `7M'   `MF'.gP"Ya `7Mb,od8 MM   ,6"Yb.`7M'   `MF'
+  MMmmmmmmMM   VA   ,V    MM   `Wb ,M'   Yb  MM' "' MM        MM   VA   ,V ,M'   Yb  MM' "' MM  8)   MM  VA   ,V  
+  MM      MM    VA ,V     MM    M8 8M""""""  MM     MM.      ,MP    VA ,V  8M""""""  MM     MM   ,pm9MM   VA ,V   
+  MM      MM     VVV      MM   ,AP YM.    ,  MM     `Mb.    ,dP'     VVV   YM.    ,  MM     MM  8M   MM    VVV    
+.JMML.  .JMML.   ,V       MMbmmd'   `Mbmmd'.JMML.     `"bmmd"'        W     `Mbmmd'.JMML. .JMML.`Moo9^Yo.  ,V     
+                ,V        MM                                                                              ,V      
+             OOb"       .JMML.                                                                         OOb"       
+
+	HyperOverlay ver.0.2.0
+	made without blood or sweat, but a lot of tears by doq
+
+	main-controls.css - css code that handles the controls
+
+	HyperOverlay is licensed under the terms of the MIT License; see the COPYING file for license details.
+*/
+
+.controls { 
+    position: absolute; 
+    width: 2160px;
+    height: 1080px; 
+    top: 150px;
+    background-color: black; 
+}
+
+.topside, .bottomside {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: min-content;
+}
+
+.leftside {
+    text-align: right;
+    display: inline-block;
+}
+
+.rightside {
+    text-align: left;
+    display: inline-block;
+}
+
+.centreside, .bottomside {
+    text-align: center;
+    display: inline-block;
+}
+
+.bigplayer, .bigscorenum, .bigrecord, .bigscorebuttons {
+    max-width: min-content;
+}
+
+.inputglobal {
+    background-color: black;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+.check {
+    width: 3em;
+    height: 3em;
+}
+
+.buttonglobal {
+    font-size: 1em;
+}
+
+.inputcrew {
+    font-size: 1em;
+    width: 3em;
+}
+
+.inputplayer {
+    font-size: 1.5em;
+    width: 10em;
+}
+
+.inputbigscore {
+    font-size: 5em;
+    width: 1.5em;
+    text-align: center;
+}
+
+.inputrecord {
+    font-size: 1.5em;
+    width: 3em;
+    text-align: center;
+}
+
+.inputset, .inputgame {
+    font-size: 1em;
+    width: 10em;
+}

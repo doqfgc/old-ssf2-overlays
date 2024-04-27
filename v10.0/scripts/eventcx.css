@@ -1,0 +1,15 @@
+.full { position: absolute; width: 1080px; height: 71px; }
+.btm { top: 0px; }
+
+.topbar { background: url('../images/evimg.png'); }
+.btmbar { background: url('../images/magenta.png'); }
+
+/* topbg left = 1014px; btmbg left = 614px; topbg top = 0px; btmbg top = 50px; */
+
+/*.topbg { position: absolute; width: 893px; height: 50px; left: 1014px; }*/
+.topbg { position: absolute; width: 1080px; height: 71px; left: 0px; top: 0px; }
+.toptext { top: 48px; opacity: 0; width: 1080px; text-align: right; line-height: 71px; font-size: 48px; }
+/*.btmbg { position: absolute; top: 50px; width: 893px; height: 50px; left: 614px; }*/
+.btmbg { position: absolute; width: 1080px; height: 71px; left: 0px; top: 0px; }
+
+.dummy { width: 0; opacity: 0; left: -3000px; }

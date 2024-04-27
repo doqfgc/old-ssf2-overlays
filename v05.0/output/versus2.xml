@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<versus2>
+	<player1>BladeUnleashed</player1>
+	<player1A>BladeUnleashed</player1A>
+	<player1B />
+	<player2>Alanweon</player2>
+	<player2A>Alanweon</player2A>
+	<player2B />
+	<score1>0</score1>
+	<score1A>0</score1A>
+	<score1B />
+	<score2>0</score2>
+	<score2A>0</score2A>
+	<score2B />
+	<image1>sandbag</image1>
+	<image1A>sandbag</image1A>
+	<image1B />
+	<image2>gamewatch</image2>
+	<image2A>gamewatch</image2A>
+	<image2B />
+	<match />
+	<matchA />
+	<matchB />
+	<game>Grand Finals||Empire V</game>
+	<gameA>Grand Finals</gameA>
+	<gameB>Empire V</gameB>
+	<visible>true</visible>
+	<time>636617467521920175</time>
+</versus2>

@@ -1,0 +1,154 @@
+<!--                                                                        ,,                    
+  .g8"""bgd                           .g8""8q.                            `7MM                    
+.dP'     `M                         .dP'    `YM.                            MM                    
+dM'       ` ,pW"Wq.`7Mb,od8 .gP"Ya  dM'      `MM `7M'   `MF'.gP"Ya `7Mb,od8 MM   ,6"Yb.`7M'   `MF'
+MM         6W'   `Wb MM' "',M'   Yb MM        MM   VA   ,V ,M'   Yb  MM' "' MM  8)   MM  VA   ,V  
+MM.        8M     M8 MM    8M"""""" MM.      ,MP    VA ,V  8M""""""  MM     MM   ,pm9MM   VA ,V   
+`Mb.     ,'YA.   ,A9 MM    YM.    , `Mb.    ,dP'     VVV   YM.    ,  MM     MM  8M   MM    VVV    
+  `"bmmmd'  `Ybmd9'.JMML.   `Mbmmd'   `"bmmd"'        W     `Mbmmd'.JMML. .JMML.`Moo9^Yo.  ,V     
+                                                                                          ,V      
+                                                                                       OOb"         
+	CoreOverlay ver.1.1.0
+	made without blood or sweat, but a lot of tears by doc norberg
+
+	main.html - the foundation document in which all other components control or be controlled by
+
+	CoreOverlay is licensed under the terms of the MIT License; see the COPYING file for license details.
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Cache-control" content="max-age=0, must-revalidate, no-store">
+	<meta charset="utf-8">
+	<script src="scripts/min-min.js"></script>
+	<script src="scripts/main.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="scripts/main-display.css">
+	<link rel="stylesheet" type="text/css" href="scripts/main-controls.css">
+	<link rel="stylesheet" type="text/css" href="scripts/main-opener.css">
+	<link rel="stylesheet" type="text/css" href="config.css">
+</head>
+
+<body>
+
+	<div class="full top">
+		<div class="overlay">
+
+			<!--<div class="bigbar"></div>-->
+			<!--<div class="littlebar"></div>-->
+
+			<div class="p1s">
+				<div class="sbg sb5 sp1" id="sb15"><div class="scorenum p15s" id="s15"></div></div>
+				<div class="sbg sb4 sp1" id="sb14"><div class="scorenum p14s" id="s14"></div></div>
+				<div class="sbg sb3 sp1" id="sb13"><div class="scorenum p13s" id="s13"></div></div>
+				<div class="sbg sb2 sp1" id="sb12"><div class="scorenum p12s" id="s12"></div></div>
+				<div class="sbg sb1 sp1" id="sb11"><div class="scorenum p11s" id="s11"></div></div>
+			</div>
+			<div class="p2s">
+				<div class="sbg sb5 sp2" id="sb25"><div class="scorenum p25s" id="s25"></div></div>
+				<div class="sbg sb4 sp2" id="sb24"><div class="scorenum p24s" id="s24"></div></div>
+				<div class="sbg sb3 sp2" id="sb23"><div class="scorenum p23s" id="s23"></div></div>
+				<div class="sbg sb2 sp2" id="sb22"><div class="scorenum p22s" id="s22"></div></div>
+				<div class="sbg sb1 sp2" id="sb21"><div class="scorenum p21s" id="s21"></div></div>
+			</div>
+
+			<div class="p1c">
+				<div class="p1nb"></div>
+				<div class="namebox nrpa p1nc p1-col" id="p1nc">
+					<div class="tname" id="p1t"></div>
+					<div class="pname" id="p1n"></div>
+				</div>
+			</div>
+
+			<div class="p2c">
+				<div class="p2nb"></div>
+				<div class="namebox nrpa p2nc p2-col" id="p2nc">
+					<div class="tname" id="p2t"></div>
+					<div class="pname" id="p2n"></div>
+				</div>
+			</div>
+
+			<div class="bc">
+				<div class="gamebox nrpa ggc gg-col" id="ggc">
+					<div class="gtext" id="gg"></div>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="controls">
+			<div class="topside">
+				<div class="bigplayer">
+					<div class="teamplayer">
+						<input class="inputglobal inputcrew" id="icr1"><br />
+						<input class="inputglobal inputplayer" id="ip1">
+					</div>
+					<input class="inputglobal inputbigscore" id="is15">
+					<input class="inputglobal inputbigscore" id="is14">
+					<input class="inputglobal inputbigscore" id="is13">
+					<input class="inputglobal inputbigscore" id="is12">
+					<input class="inputglobal inputbigscore" id="is11">
+					<div class="dpad"><button class="buttonglobal lrb" type="button" onclick="CoreOverlay.send('g', 'left');">&#9664;</button><div class="updown">
+	<button class="buttonglobal" type="button" onclick="CoreOverlay.send('left', 'up');">&#9650;</button><br />
+	<button class="buttonglobal" type="button" onclick="CoreOverlay.send('left', 'down');">&#9660;</button>
+</div><button class="buttonglobal lrb" type="button" onclick="CoreOverlay.send('g', 'right');">&#9654;</button>
+					</div>
+				</div>
+			</div>
+			<div class="middleside">
+				<div class="bigplayer">
+					<div class="teamplayer">
+						<input class="inputglobal inputcrew" id="icr2"><br />
+						<input class="inputglobal inputplayer" id="ip2">
+					</div>
+					<input class="inputglobal inputbigscore" id="is25">
+					<input class="inputglobal inputbigscore" id="is24">
+					<input class="inputglobal inputbigscore" id="is23">
+					<input class="inputglobal inputbigscore" id="is22">
+					<input class="inputglobal inputbigscore" id="is21">
+					<div class="dpad"><button class="buttonglobal lrb" type="button" onclick="CoreOverlay.send('g', 'left');">&#9664;</button><div class="updown">
+							<button class="buttonglobal" type="button" onclick="CoreOverlay.send('right', 'up');">&#9650;</button><br />
+							<button class="buttonglobal" type="button" onclick="CoreOverlay.send('right', 'down');">&#9660;</button>
+						</div><button class="buttonglobal lrb" type="button" onclick="CoreOverlay.send('g', 'right');">&#9654;</button>
+					</div>
+				</div>
+			</div>
+			<div class="bottomside">
+				Enabled <input type="checkbox" class="check" id="overlaystatus" onclick="CoreOverlay.toggleOverlay();">
+				<button class="buttonglobal" type="button" onclick="CoreOverlay.send('send');">Send</button>
+				<input class="inputglobal inputset" id="imm"><br />
+				<p id="hol-status">OK</p>
+			</div>
+		</div>
+
+	<script>
+		$('#overlaystatus').set('checked', false);
+		$('#inverted').set('checked', false);
+		$(is1[currentset]).set('$background-color','#080');
+		$(is2[currentset]).set('$background-color','#080');
+		if (debugswitch) {
+			$('#ip1').set("value", "Player 1");
+			$('#ip2').set("value", "Player 2");
+			$('#is11').set("value", 0);
+			$('#is21').set("value", 0);
+			$('#is12').set("value", 0);
+			$('#is22').set("value", 0);
+			$('#is13').set("value", 0);
+			$('#is23').set("value", 0);
+			$('#is14').set("value", 0);
+			$('#is24').set("value", 0);
+			$('#is15').set("value", 0);
+			$('#is25').set("value", 0);
+			$('#icr1').set("value", "Team 1");
+			$('#icr2').set("value", "Team 2");
+			$('#ir1w').set("value", 0);
+			$('#ir2w').set("value", 0);
+			$('#ir1l').set("value", 0);
+			$('#ir2l').set("value", 0);
+			$('#imm').set("value", "FLASH 5v5 LEAGUE - WEEK 1 - 17 APRIL 2022");
+			//CoreOverlay.toggleOverlay();
+		}
+	</script>	
+</body>
+</html>

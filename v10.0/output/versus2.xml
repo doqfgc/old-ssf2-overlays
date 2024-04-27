@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<versus2>
+	<player1>Arsee</player1>
+	<player1A>Arsee</player1A>
+	<player1B />
+	<player2>Rage [W]</player2>
+	<player2A>Rage [W]</player2A>
+	<player2B />
+	<score1>1</score1>
+	<score1A>1</score1A>
+	<score1B />
+	<score2>3</score2>
+	<score2A>3</score2A>
+	<score2B />
+	<image1>blackmage</image1>
+	<image1A>blackmage</image1A>
+	<image1B />
+	<image2>blackmage</image2>
+	<image2A>blackmage</image2A>
+	<image2B />
+	<match>MGCS: Just Vibin'</match>
+	<matchA>MGCS: Just Vibin'</matchA>
+	<matchB />
+	<game>Grand Finals - Best of 5</game>
+	<gameA>Grand Finals - Best of 5</gameA>
+	<gameB />
+	<visible>true</visible>
+	<time>637210212762842129</time>
+</versus2>

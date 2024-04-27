@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<versus2>
+	<player1>{{AFM}} TillurMan</player1>
+	<player1A>{{AFM}} TillurMan</player1A>
+	<player1B />
+	<player2>{{AFM}} shirobby</player2>
+	<player2A>{{AFM}} shirobby</player2A>
+	<player2B />
+	<score1>0</score1>
+	<score1A>0</score1A>
+	<score1B />
+	<score2>0</score2>
+	<score2A>0</score2A>
+	<score2B />
+	<image1>fox</image1>
+	<image1A>fox</image1A>
+	<image1B />
+	<image2>donkeykong</image2>
+	<image2A>donkeykong</image2A>
+	<image2B />
+	<match />
+	<matchA />
+	<matchB />
+	<game />
+	<gameA />
+	<gameB />
+	<visible>true</visible>
+	<time>638275471938587733</time>
+</versus2>
