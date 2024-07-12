@@ -1,0 +1,9 @@
+ver.1.0.0
+- renamed the project to CoreOverlay
+- mirrored the contents of the overlay into the editor, making it effectively WYSIWYG
+
+ver.0.2.0
+- cleanup code from old overlay system, make it overall cleaner
+
+ver.0.1.0
+- Initial version
