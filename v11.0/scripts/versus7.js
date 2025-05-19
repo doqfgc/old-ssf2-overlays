@@ -31,9 +31,14 @@ function getResponse() {
 }
 
 // onload code
-$.wait(2000).then(function() {
-	$('.scorebox').set('$opacity', 1);
-	$('.namebox').set('$opacity', 1);
+$.wait(1500).then(function() {
+	$('.scorebox').set('$transform', 'rotate3d(1,0,0,0deg)');
+	$('.namebox').set('$transform', 'rotate3d(1,0,0,0deg)');
+	$('.flash').animate({$$fade: 1}, 300).then(function() {
+		$('.flash').animate({$$fade: 0}, 700);
+		$('.scoremain').animate({$$fade: 1}, 700);
+		$('.pname').animate({$$fade: 1}, 700);
+	});
 });
 
 function flashScore(parr) {
@@ -47,6 +52,22 @@ function flashScore(parr) {
 		});
 	});
 }
+
+function wigglePieces() {
+	$('.p1n').set('$left', '599px');
+	$('.p2n').set('$right', '599px');
+	$('.namebox').set('$top', '26px');
+	$('.scorebox').set('$top', '23px');
+	$.wait(5000).then(function() {
+		$('.p1n').set('$left', '609px');
+		$('.p2n').set('$right', '609px');
+		$('.namebox').set('$top', '31px');
+		$('.scorebox').set('$top', '18px');
+		$.wait(5000);
+	});
+}
+
+owo = setInterval(wigglePieces, 10000);
 
 function runUpdate() {
 	//if (timeOld == timeNew) return;
