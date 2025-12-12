@@ -17,3 +17,9 @@ Overlays created in 2021 and later (v12.1 and later) are built on some version o
 Overlays created before 2017 ("Old Overlay" series and v1/v2) were imagestacks maintained manually without any tools. There is also no guarantee that everything will be present, and the quality is so spotty that they have been omitted from the repository.
 
 v3 is missing.
+
+## Using via GitHub Pages
+
+On most CoreOverlay-based overlay packages, you can use the GitHub Pages url directly as a browser source in OBS. Navigate to the desired version and copy the URL into OBS's browser source configuration. The required fonts will still need to be installed system-side.
+
+[v13](v13/main.html) [v14](v14/main.html) [v15](v15/main.html) [v16](v16/main.html)
