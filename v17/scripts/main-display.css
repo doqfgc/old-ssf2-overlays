@@ -1,0 +1,277 @@
+/*                                                                          ,,                    
+  .g8"""bgd                           .g8""8q.                            `7MM                    
+.dP'     `M                         .dP'    `YM.                            MM                    
+dM'       ` ,pW"Wq.`7Mb,od8 .gP"Ya  dM'      `MM `7M'   `MF'.gP"Ya `7Mb,od8 MM   ,6"Yb.`7M'   `MF'
+MM         6W'   `Wb MM' "',M'   Yb MM        MM   VA   ,V ,M'   Yb  MM' "' MM  8)   MM  VA   ,V  
+MM.        8M     M8 MM    8M"""""" MM.      ,MP    VA ,V  8M""""""  MM     MM   ,pm9MM   VA ,V   
+`Mb.     ,'YA.   ,A9 MM    YM.    , `Mb.    ,dP'     VVV   YM.    ,  MM     MM  8M   MM    VVV    
+  `"bmmmd'  `Ybmd9'.JMML.   `Mbmmd'   `"bmmd"'        W     `Mbmmd'.JMML. .JMML.`Moo9^Yo.  ,V     
+                                                                                          ,V      
+                                                                                       OOb"         
+	CoreOverlay ver.1.1.1-acx
+	made without blood or sweat, but a lot of tears by doq
+
+	main-display.css - css code that handles the displayed overlay (what the stream sees)
+
+	CoreOverlay is licensed under the terms of the MIT License; see the COPYING file for license details.
+*/
+
+/*
+
+targets:
+
+bigbar
+    |- p1c, abs, left: 145, width: 750px
+    |   |- p1n, rel, left: 5px, top: 30px, width: 575px, height: 55px
+    |   |- p1r, rel, right: 100px, top: 40px, width: 70px, height: 40px
+    |   \- s1, rel, right: 0px; 
+    |- p2c, abs, left: 895, width: 750px
+    \   |- p2n, rel, left: 5px, top: 30px, width: 575px, height: 55px
+        |- p2r, rel, right: 100px, top: 40px, width: 70px, height: 40px
+        \- s2
+
+        \- mm, rel, right: 50px, top: 110px, width: 300px, height: 35px
+        \- gg, rel, left: 50px, top: 110px, width: 300px, height: 35px
+
+also, player names 48, crew 32, records 36, scores 96, info 16
+    
+I wonder if I can position both on the same side, and then flip p1 or p2 after the fact...
+probably not if I want to keep animation.
+
+*/
+
+body {
+	position: relative; width: 2160px; margin: 0 auto; overflow: hidden; white-space: nowrap; color: #FFF;
+	font-family: "MADE Outer Sans"; font-weight: 700;
+	font-size: 48px; line-height: 42px; text-align: left;
+	text-transform: uppercase;
+}
+
+.overflow { overflow: hidden; text-overflow: ellipsis; }
+
+.full { position: absolute; width: 2160px; height: 175px; }
+.btm { bottom: 0px; opacity: 0; }
+.top { top: 0px; opacity: 1; left: 0px; }
+
+.overlay {
+    position: absolute;
+    width: 2160px;
+    height: 200px;
+    right: 0px;
+    opacity: 1;
+}
+
+.nrpa { background-repeat: no-repeat; position: absolute; opacity: 1; }
+.scorenum { position: absolute; }
+.bigbar {
+    position: absolute;
+    left: calc(1645px / 2);
+    top: 35px;
+    width: 1645px;
+    height: 50px;
+    background: #000;
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: opacity 1000ms, top 1000ms, width 1000ms;
+}
+.littlebar {
+    position: absolute;
+    left: 0;
+    top: 35px;
+    width: 145px;
+    height: 50px;
+    background: #000;
+    opacity: 0;
+    transition: opacity 1000ms, top 1000ms;
+}
+.p1c { position: absolute; width: 750px; left: 145px; opacity: 0; transition: opacity 1000ms;}
+.p2c { position: absolute; width: 750px; left: 905px; opacity: 0; transition: opacity 1000ms;}
+    .pname { margin: 7px; letter-spacing: 20px; }
+    .pname small {
+        font-size: 24px;
+    }
+    .gtext { margin: -3px 3px 0 3px; font-style: normal; }
+    .recnum { text-align: left; margin: 7px; }
+    .namebox { 
+        transition: width 700ms, left 1000ms, right 1000ms, top 1000ms, filter 500ms;
+        height: 55px; font-size: 36px; overflow: hidden;
+    }
+    .namemask {
+        width: 740px; height: 55px; overflow: hidden;
+    }
+    .recbox { 
+        transition: width 700ms, left 1000ms, right 1000ms, top 1000ms, filter 500ms, opacity 500ms;
+        height: 40px; font-size: 18px; overflow: hidden; opacity: 0;
+    }
+    .gamebox { 
+        transition: width 700ms, left 1000ms, right 1000ms, top 1000ms, filter 500ms;
+        height: 35px; font-size: 16px; overflow: hidden; 
+    }
+    .p1nc, .p2nc { left: 5px; top: 30px; width: 740px; }
+    .p1nb, .p2nb {
+        position: absolute; left: 0; top: 60px; width: 750px; height: 0px; opacity: 1;
+        transform: translateY(-50%);
+        transition: opacity 1000ms, top 1000ms, height 650ms, left 750ms, right 750ms; 
+    }
+    .p1nb { 
+        background: #1008; }
+    .p2nb { 
+        background: #0018; }
+    .p1rc, .p2rc { left: 5px; top: 53px; width: 575px; visibility: visible; }
+    .f-p1n { color: #faa; opacity: 0.90; }
+    .f-p2n { color: #aaf; opacity: 0.90; }
+    .fl-p1n { color: #200; opacity: 0.90; }
+    .fl-p2n { color: #002; opacity: 0.90; }
+
+    .bc { position:absolute; left: 1080px; top: 23px; transform: translate(-50%, -50%); 
+        background-color: #000b; width: 2160px; height: 0px; opacity: 1; overflow: hidden;
+        transition: height 1000ms, top 1000ms, opacity 1000ms; }
+    .ggc { left: 50%; bottom: -5px; transform: translateX(-50%); letter-spacing: 3px; }
+
+.scorenum {
+    width: 120px;
+    font-size: 96px;
+    text-align: center;
+    font-style: italic;
+}
+.p1s, .p2s {
+    top: 35px;
+    right: 0px;
+}
+#tt, #gg, #dd, #bo {
+    position: relative;
+    padding: 0 40px; 
+    display: inline-block;
+}
+#gg, #tt, #dd, #bo { text-align: center; opacity: 0; }
+#gg, #tt, #dd, #bo {
+    transition: opacity 500ms, right 500ms, color 500ms; 
+}
+#p2n, #p1n {
+    transition: opacity 500ms, left 1000ms, color 500ms, transform 1000ms,
+                font-size 1000ms, letter-spacing 1000ms;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+}
+#s1, #s2 {
+    transition: color 500ms; 
+}
+.initlines{
+    transform: skewX(-15deg);
+}
+
+.initlineslines {
+    transition: width 1000ms;
+    position: absolute;
+    left: calc((1655px / 2) + 87px);
+    width: 0px;
+    transform: translateX(-50%);
+}
+
+/* pfewpkjfwpoefwef */
+
+.opener {
+    position: absolute;
+    top: 23px;
+    left: 900px;
+    transform: translateX(-50%) scale(1.8);
+    opacity: 0;
+    transition: transform 1500ms, opacity 1000ms;
+}
+
+.coreoverlaytext {
+    position: relative;
+    top: 14px;
+    height: 65px;
+}
+
+/*
+    top/bottom bars:
+        width: 0 -> 42
+        { l/r: 0 -> 727 - translateX: 0 -> +-100% }
+        width: 42 -> 0
+    x:
+        width: 0 -> 42
+        rotation: +-45deg -> 0
+        visibility: hidden
+    middle bars:
+        visibility: visible
+        width: 84 -> 1510
+        height: 5 -> 60
+        visibility: hidden
+    transition to player bars
+
+    copy this to js as well
+*/
+
+.x-abs {
+    position: absolute;
+    width: 1510px;
+    height: 60px;
+    left: 145px;
+    top: 30px;
+}
+
+.x-horiz {
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background-color: white;
+}
+
+.x-horiz-t, .x-ht { top: 0; }
+.x-horiz-b, .x-hb { bottom: 0; }
+
+.x-ll, .x-rr {
+    position: absolute;
+    width: 0px;
+    height: 60px;
+    transition: width 200ms linear, left 500ms linear, right 500ms linear, transform 750ms linear;
+}
+
+.x-ll { left: 0; transform: translateX(0%); }
+.x-rr { right: 0; transform: translateX(0%); }
+
+.x-cc {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 84px; height: 60px; 
+    overflow: hidden;
+}
+
+.x-cl, .x-cr {
+    position: absolute;
+    width: 0px;
+    height: 60px;
+    overflow: hidden;
+    transition: width 200ms;
+}
+
+.x-cl { left: 0; }
+.x-cr { right: 0; }
+
+.x-diag {
+    position: absolute;
+    width: 84px;
+    height: 5px;
+    background-color: white;
+    transition: transform 500ms;
+}
+
+.x-diag-t { transform: rotate(45deg); top: 28px; }
+.x-diag-b { transform: rotate(-45deg); bottom: 28px; }
+.x-diag-r { right: 0; }
+
+.x-hr {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 30px;
+    left: 50%;
+    height: 5px;
+    width: 84px;
+    visibility: hidden;
+    transition: width 300ms linear, height 650ms, opacity 750ms;
+}

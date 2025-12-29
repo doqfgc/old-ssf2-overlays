@@ -1,0 +1,218 @@
+<!--                                                                        ,,                    
+  .g8"""bgd                           .g8""8q.                            `7MM                    
+.dP'     `M                         .dP'    `YM.                            MM                    
+dM'       ` ,pW"Wq.`7Mb,od8 .gP"Ya  dM'      `MM `7M'   `MF'.gP"Ya `7Mb,od8 MM   ,6"Yb.`7M'   `MF'
+MM         6W'   `Wb MM' "',M'   Yb MM        MM   VA   ,V ,M'   Yb  MM' "' MM  8)   MM  VA   ,V  
+MM.        8M     M8 MM    8M"""""" MM.      ,MP    VA ,V  8M""""""  MM     MM   ,pm9MM   VA ,V   
+`Mb.     ,'YA.   ,A9 MM    YM.    , `Mb.    ,dP'     VVV   YM.    ,  MM     MM  8M   MM    VVV    
+  `"bmmmd'  `Ybmd9'.JMML.   `Mbmmd'   `"bmmd"'        W     `Mbmmd'.JMML. .JMML.`Moo9^Yo.  ,V     
+                                                                                          ,V      
+                                                                                       OOb"         
+	CoreOverlay ver.1.1.1-acx
+	made without blood or sweat, but a lot of tears by doq
+
+	main.html - the foundation document in which all other components control or be controlled by
+
+	CoreOverlay is licensed under the terms of the MIT License; see the COPYING file for license details.
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Cache-control" content="max-age=0, must-revalidate, no-store">
+	<meta charset="utf-8">
+	<script src="scripts/min-min.js"></script>
+	<script src="scripts/main.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="scripts/main-display.css">
+	<link rel="stylesheet" type="text/css" href="scripts/main-controls.css">
+	<link rel="stylesheet" type="text/css" href="config.css">
+</head>
+
+<body>
+
+	<div class="full top">
+		<div class="overlay">
+
+			<div class="p1c">
+				<div class="p1nb"></div>
+				<div class="recbox nrpa p1rc p1-col" id="p1rc">
+					<div class="recnum" id="p1r"></div>
+				</div>
+
+				
+				<div class="namebox nrpa p1nc p1-col" id="p1nc">
+					<div class="namemask">
+						<div class="pname" id="p1n"></div>
+					</div>
+				</div>
+
+				<div class="scorenum p1s" id="s1"></div>
+			</div>
+
+			<div class="p2c">
+				<div class="p2nb"></div>
+				<div class="recbox nrpa p2rc p2-col" id="p2rc">
+					<div class="recnum" id="p2r"></div>
+				</div>
+
+				<div class="namebox nrpa p2nc p2-col" id="p2nc">
+					<div class="namemask">
+						<div class="pname" id="p2n"></div>
+					</div>
+				</div>
+				
+				<div class="scorenum p2s" id="s2"></div>
+			</div>
+
+			<div class="bc">
+				<div class="gamebox nrpa ggc gg-col" id="ggc">
+					<div class="gtext" id="gg"></div>
+					<div class="gtext" id="dd"></div>
+					<div class="gtext" id="tt"></div>
+					<div class="gtext" id="bo"></div>
+				</div>
+			</div>
+
+			<div class="theX">
+				<!--
+					So I could do this the hard way and animate every piece
+					individually throughout. Oooorrrr, I could just mask it
+					with two divs. Yeah.
+
+					Turns out I can't do that the way I thought it up, so I'll
+					have to do some shenanigans with counter-movement of the
+					elements.
+
+					Middle X will need to be duplicated because of double masking.
+				-->
+				<div class="x-abs">
+					<div class="x-ll">
+						<div class="x-horiz x-horiz-t" id="xhtl"></div>
+						<div class="x-horiz x-horiz-b" id="xhbl"></div>
+					</div>
+					<div class="x-rr">
+						<div class="x-horiz x-horiz-t" id="xhtr"></div>
+						<div class="x-horiz x-horiz-b" id="xhbr"></div>
+					</div>
+					<div class="x-hr">
+						<div class="x-horiz x-ht"></div>
+						<div class="x-horiz x-hb"></div>
+					</div>
+					<div class="x-cc">
+						<div class="x-cl">
+							<div class="x-diag x-diag-l x-diag-t" id="xdtbl"></div>
+							<div class="x-diag x-diag-l x-diag-b" id="xdbtl"></div>
+						</div>
+						<div class="x-cr">
+							<div class="x-diag x-diag-r x-diag-t" id="xdtbr"></div>
+							<div class="x-diag x-diag-r x-diag-b" id="xdbtr"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="opener">
+				<div class="coreoverlaytext">COREOVERLAY</div>
+			</div>
+
+		</div>
+
+		<div class="controls">
+			<div class="topside">
+				<div class="leftside">
+					<div class="bigplayer">
+						<input class="inputglobal inputcrew" id="icr1">
+						<input class="inputglobal inputplayer" id="ip1">
+						<input class="inputglobal inputbigscore" id="is1">
+						<div class="updown">
+							<button class="buttonglobal" type="button" onclick="CoreOverlay.send('left', 'up');">&#9650;</button><br />
+							<button class="buttonglobal" type="button" onclick="CoreOverlay.send('left', 'down');">&#9660;</button>
+						</div>
+					</div>
+				</div>
+				<div class="centreside">
+					<button class="buttonglobal" type="button" onclick="CoreOverlay.send('send');">Send</button><br />
+					<button class="buttonglobal" type="button" onclick="CoreOverlay.switchp();">Switch</button><br />
+				</div>
+				<div class="rightside">
+					<div class="bigplayer">
+						<input class="inputglobal inputcrew" id="icr2">
+						<input class="inputglobal inputplayer" id="ip2">
+						<input class="inputglobal inputbigscore" id="is2">
+						<div class="updown">
+							<button class="buttonglobal" type="button" onclick="CoreOverlay.send('right', 'up');">&#9650;</button><br />
+							<button class="buttonglobal" type="button" onclick="CoreOverlay.send('right', 'down');">&#9660;</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="deadmiddle">
+				Bottom <input type="checkbox" class="check" id="bottomenabled" onclick="CoreOverlay.enablebottom();">
+			</div>
+			<div class="beforebottom">
+				<input class="inputglobal inputsmallinfo" id="ismi1">
+				<input class="inputglobal inputrecord" id="ir1w"> - <input class="inputglobal inputrecord" id="ir1l">
+				<div class="midchecks">
+					<small>Rec</small>&nbsp;<small>()</small>&nbsp;<small>UPD</small><br />
+					<input type="checkbox" class="check" id="recordon" onclick="CoreOverlay.togglerecord();">&nbsp;&nbsp;&nbsp;
+					<input type="checkbox" class="check" id="parenth" onclick="parenth = $('#parenth').get('checked');">&nbsp;&nbsp;&nbsp;
+					<input type="checkbox" class="check" id="recupd" onclick="recupd = $('#recupd').get('checked');">
+				</div>
+				<input class="inputglobal inputsmallinfo" id="ismi2">
+				<input class="inputglobal inputrecord" id="ir2w"> - <input class="inputglobal inputrecord" id="ir2l"><br />
+				<small>Info</small><input type="checkbox" class="check" id="infoenable" onclick="CoreOverlay.toggleinfo();">
+				<input class="inputglobal inputinfo" id="iinfobox">
+				<small>P1</small><input type="checkbox" class="check" id="infop1" onclick="CoreOverlay.switchinfotype(1);">
+				<small>P2</small><input type="checkbox" class="check" id="infop2" onclick="CoreOverlay.switchinfotype(2);">
+			</div>
+			<div class="bottomside">
+				Enabled <input type="checkbox" class="check" id="overlaystatus" onclick="CoreOverlay.toggleOverlay();">
+				Fade Light <input type="checkbox" class="check" id="fadestatus" onclick="CoreOverlay.fadeOverlay(1);">
+				Dark <input type="checkbox" class="check" id="fadestatus2" onclick="CoreOverlay.fadeOverlay(2);">
+				<input class="inputglobal inputset" id="imm">
+				<input class="inputglobal inputdate" id="idt">
+				<input class="inputglobal inputgame" id="igg">
+				<input class="inputglobal inputbo" id="ibo">
+				<p id="hol-status">OK</p>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		$('#fadestatus').set('checked', false);
+		$('#fadestatus2').set('checked', false);
+		$('#overlaystatus').set('checked', false);
+		$('#bottomenabled').set('checked', false);
+		$('#recordon').set('checked', false);
+		$('#parenth').set('checked', false);
+		$('#recupd').set('checked', true);
+		$('#infoenable').set('checked', false);
+		$('#infop1').set('checked', false);
+		$('#infop2').set('checked', false);
+		$('#ip1').set("value", "Player 1");
+		$('#ip2').set("value", "Player 2");
+		$('#is1').set("value", 0);
+		$('#is2').set("value", 0);
+		$('#icr1').set("value", "ABC");
+		$('#icr2').set("value", "XYZ");
+		$('#ir1w').set("value", 0);
+		$('#ir2w').set("value", 0);
+		$('#ir1l').set("value", 0);
+		$('#ir2l').set("value", 0);
+		$('#iinfobox').set("value", "Some nerd clinches with a win");
+		$('#ismi1').set("value", "This placeholder:");
+		$('#ismi2').set("value", "This placeholder:");
+		$('#imm').set("value", "Sample Tour");
+		$('#idt').set("value", "32 February 2420");
+		$('#igg').set("value", "Sample Round");
+		$('#ibo').set("value", "Best of 69");
+		if (debugswitch) {
+			$('.full').set('$background-color', debugcol);
+			CoreOverlay.toggleOverlay();
+			$('#overlaystatus').set('checked', true);
+		}
+		generatelines();
+	</script>	
+</body>
+</html>
