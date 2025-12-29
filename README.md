@@ -22,4 +22,4 @@ v3 is missing.
 
 On most CoreOverlay-based overlay packages, you can use the GitHub Pages url directly as a browser source in OBS. Navigate to the desired version and copy the URL into OBS's browser source configuration. The required fonts will still need to be installed system-side.
 
-[v12.1](v12.1-CoreOverlay/main.html) [v13](v13/main.html) [v14](v14/main.html) [v15](v15/main.html) [v16](v16/main.html)
+[v12.1](v12.1-CoreOverlay/main.html) [v13](v13/main.html) [v14](v14/main.html) [v15](v15/main.html) [v16](v16/main.html) [v17](v17/main.html)
